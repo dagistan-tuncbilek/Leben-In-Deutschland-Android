@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF388"
+        android:paddingLeft="10dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:subtitle="Bürgeschaft Prüfung"
+        app:title="Leben In Deutschland"></androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/mainFlag"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_flag" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCardViewLearning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainToolbar"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_learn" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_centerVertical="true"
+                android:text="Learnen Fragen"
+                android:textSize="18dp"
+                android:textStyle="italic|bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCardViewTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainCardViewLearning"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_centerVertical="true"
+                android:text="Testen sich"
+                android:textSize="18dp"
+                android:textStyle="italic|bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCardViewExam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainCardViewTest"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_exam" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_centerVertical="true"
+                android:text="Probeprüfung"
+                android:textSize="18dp"
+                android:textStyle="italic|bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCardViewSelectState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainCardViewExam"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_bundeslander" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_centerVertical="true"
+                android:text="Wahlen Sie ein Bundesländer"
+                android:textSize="18dp"
+                android:textStyle="italic|bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
