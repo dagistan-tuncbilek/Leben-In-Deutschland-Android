@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Leben In Deutschland</string>
+
+    <string name="bundeslander">Bundesländer</string>
+    <string name="baden">Baden Württemberg</string>
+    <string name="bayern">Bayern</string>
+    <string name="berlin">Berlin</string>
+    <string name="brandenburg">Brandenburg</string>
+    <string name="bremen">Bremen</string>
+    <string name="hamburg">Hamburg</string>
+    <string name="hessen">Hessen</string>
+    <string name="mecklenburg">Mecklenburg Vorpommern</string>
+    <string name="niedersachsen">Niedersachsen</string>
+    <string name="nw">Nordrhein Westfalen</string>
+    <string name="rheinland">Rheinland Pfalz</string>
+    <string name="saarland">Saarland</string>
+    <string name="sachsen">Sachsen</string>
+    <string name="sachsen_anhalt">Sachsen Anhalt </string>
+    <string name="schleswig">Schleswig Holstein</string>
+    <string name="thuringen">Thüringen</string>
+
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="backarrow">backArrow</string>
+    <string name="title_lernen">Lernen Fragen und Antworten</string>
+    <string name="learnlogo">learnLogo</string>
+
 </resources>

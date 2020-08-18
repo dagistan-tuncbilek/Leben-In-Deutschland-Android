@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".learn.LearningActivity">
+    tools:context=".test.TestActivity"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFF388"
-        app:contentInsetEnd="5dp"
-        app:contentInsetStart="5dp">
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:padding="0dp">
 
             <ImageView
-                android:id="@+id/learnBackArrow"
+                android:id="@+id/testBackArrow"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
@@ -28,38 +28,38 @@
                 android:src="@drawable/ic_back_24" />
 
             <TextView
-                android:id="@+id/learnToolText"
+                android:id="@+id/testToolText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/learnBackArrow"
-                android:text="@string/title_lernen"
+                android:layout_toEndOf="@+id/testBackArrow"
+                android:text="Testen Sie sich"
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:ignore="RelativeOverlap"></TextView>
 
             <TextView
-                android:id="@+id/learnToolSubText"
+                android:id="@+id/testToolSubText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/learnBackArrow"
+                android:layout_toEndOf="@+id/testBackArrow"
                 android:text="Wahlen Sie bitte ein Thema"
                 android:textColor="@color/colorBlack"
                 android:textSize="15sp"
                 android:textStyle="italic"
-                tools:ignore="RelativeOverlap"></TextView>
+                tools:ignore="RelativeOverlap"/>
 
             <ImageView
-                android:id="@+id/learnImg"
+                android:id="@+id/testImg"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentEnd="true"
                 android:contentDescription="@string/learnlogo"
-                android:src="@drawable/ic_learn" />
+                android:src="@drawable/ic_test" />
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
@@ -73,7 +73,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/learnRecyclerView"
+            android:id="@+id/testRecyclerView"
             android:layout_marginBottom="50dp"/>
 
     </LinearLayout>

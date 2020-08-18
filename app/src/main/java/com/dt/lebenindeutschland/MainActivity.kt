@@ -4,8 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.cardview.widget.CardView
+import com.dt.lebenindeutschland.learn.LearningActivity
+import com.dt.lebenindeutschland.test.TestActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
@@ -19,11 +20,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         setContentView(R.layout.activity_main)
         initialize()
     }
-    override fun onClick(v: View) {
-        when(v.id){
-            R.id.mainCardViewLearning -> startActivity(Intent(this, LearningActivity::class.java))
+
+    override fun onClick(v: View?) {
+        if (v != null) {
+            when(v.id){
+                R.id.mainCardViewLearning -> startActivity(Intent(this, LearningActivity::class.java))
+                R.id.mainCardViewTest -> startActivity(Intent(this, TestActivity::class.java))
+                R.id.mainCardViewSelectState -> startActivity(Intent(this, SelectStateActivity::class.java))
+            }
         }
     }
+
     private fun initialize() {
         mainCardViewLearning = findViewById(R.id.mainCardViewLearning)
         mainCardViewLearning.setOnClickListener(this)

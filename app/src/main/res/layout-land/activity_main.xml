@@ -16,7 +16,7 @@
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
         app:subtitle="Bürgeschaft Prüfung"
-        app:title="Leben In Deutschland"></androidx.appcompat.widget.Toolbar>
+        app:title="Leben In Deutschland"/>
 
     <ImageView
         android:id="@+id/mainFlag"
