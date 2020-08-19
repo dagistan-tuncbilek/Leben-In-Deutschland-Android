@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/themaTextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Question"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/themaTextAnswerA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:text="textAnswerA" />
+
+    <TextView
+        android:id="@+id/themaTextAnswerB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:text="textAnswerB" />
+
+    <TextView
+        android:id="@+id/themaTextAnswerC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:text="textAnswerC" />
+
+    <TextView
+        android:id="@+id/themaTextAnswerD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:text="textAnswerD" />
+
+    <ImageView
+        android:id="@+id/themaImgQestion"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+</LinearLayout>

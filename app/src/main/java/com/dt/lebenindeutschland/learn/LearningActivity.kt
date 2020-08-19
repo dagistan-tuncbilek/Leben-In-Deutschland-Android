@@ -8,15 +8,17 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dt.lebenindeutschland.MainActivity
 import com.dt.lebenindeutschland.R
-import com.dt.lebenindeutschland.data.Thema
+import com.dt.lebenindeutschland.SelectStateActivity
+import com.dt.lebenindeutschland.data.State
 import com.dt.lebenindeutschland.data.getThemasData
+import com.dt.lebenindeutschland.selectedState
 import kotlinx.android.synthetic.main.activity_learning.*
 
 class LearningActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var backArrow : ImageView
     private lateinit var linearLayoutManager: LinearLayoutManager
-    private lateinit var adapter: ThemaRecycleviewAdapter
+    private lateinit var adapter: LearningRecycleviewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +27,7 @@ class LearningActivity : AppCompatActivity(), View.OnClickListener {
         linearLayoutManager = LinearLayoutManager(this)
         learnRecyclerView.layoutManager = linearLayoutManager
 
-        adapter = ThemaRecycleviewAdapter(getThemasData())
+        adapter = LearningRecycleviewAdapter(getThemasData())
         learnRecyclerView.adapter = adapter
         backArrow = findViewById(R.id.learnBackArrow)
         backArrow.setOnClickListener(this)

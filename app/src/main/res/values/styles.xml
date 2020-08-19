@@ -7,4 +7,9 @@
         <item name="colorAccent">@color/colorBlueLight</item>
     </style>
 
+    <style name="CheckBoxTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#FFC107</item>
+        <item name="colorControlActivated">#9C27B0</item>
+    </style>
+
 </resources>

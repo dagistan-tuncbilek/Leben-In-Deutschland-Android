@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.cardview.widget.CardView
+import com.dt.lebenindeutschland.data.State
 import com.dt.lebenindeutschland.learn.LearningActivity
 import com.dt.lebenindeutschland.test.TestActivity
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if (selectedState == State.NOT_SELECTED) startActivity(Intent(this, SelectStateActivity::class.java))
         initialize()
     }
 

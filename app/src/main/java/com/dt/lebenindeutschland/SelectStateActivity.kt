@@ -1,11 +1,11 @@
 package com.dt.lebenindeutschland
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.dt.lebenindeutschland.data.State
 
@@ -58,8 +58,26 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
                 R.id.cardThrungen -> selectedState = State.THURINGEN
             }
         }
-        Toast.makeText(applicationContext, selectedState.getStateName()+" Selected",Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this, MainActivity::class.java))
+        if (selectedState == State.NOT_SELECTED){
+            Toast.makeText(applicationContext, "Bitte wahlen Sie ein Thema", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(
+                applicationContext,
+                selectedState.getStateName() + " gewahlt",
+                Toast.LENGTH_SHORT
+            ).show()
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+    }
+
+    override fun onBackPressed() {
+        if (selectedState == State.NOT_SELECTED) {
+            Toast.makeText(applicationContext, "Bitte wahlen Sie ein Thema", Toast.LENGTH_SHORT)
+                .show()
+            return
+        } else {
+            finish()
+        }
     }
 
     private fun initialize() {

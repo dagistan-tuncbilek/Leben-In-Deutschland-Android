@@ -1,6 +1,7 @@
 package com.dt.lebenindeutschland.test
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,8 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.dt.lebenindeutschland.R
 import com.dt.lebenindeutschland.data.ThemaData
+import com.dt.lebenindeutschland.learn.LearningActivity
+import com.dt.lebenindeutschland.learn.ThemaActivity
 
 class TestRecycleviewAdapter (private val list: List<ThemaData>) : RecyclerView.Adapter<TestRecycleviewAdapter.ViewHolder>() {
 
@@ -49,8 +52,9 @@ class TestRecycleviewAdapter (private val list: List<ThemaData>) : RecyclerView.
         }
 
         override fun onClick(v: View?) {
-            Toast.makeText(parent.context, " Clicked", Toast.LENGTH_SHORT).show()
-
+            if (v != null) {
+                v.getContext().startActivity(Intent(parent.context, TestThemaActivity::class.java))
+            }
         }
 
     }

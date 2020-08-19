@@ -8,5 +8,6 @@ data class Question (
 		val thema: String,
 		val trueAnswer: Char,
 		val succes: String,
-		val hasPhoto: Boolean
+		val hasPhoto: Boolean,
+		var learned: Boolean = false
 )

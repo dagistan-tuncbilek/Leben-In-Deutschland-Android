@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".test.TestThemaActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF388"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+            <ImageView
+                android:id="@+id/testThemaBackArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/backarrow"
+                android:src="@drawable/ic_back_24" />
+
+            <TextView
+                android:id="@+id/testThemaToolText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/testThemaBackArrow"
+                android:text="Testen Sie sich"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap"/>
+
+            <TextView
+                android:id="@+id/testThemaSubText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/testThemaBackArrow"
+                android:text="Staat/Land"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/testThemaImg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/learnlogo"
+                android:src="@drawable/ic_test" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/testThemaQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Question"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/testThemaAnswerA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:text="textAnswerA"
+            android:theme="@style/CheckBoxTheme"
+            android:textColor="@color/colorBlack" />
+
+        <CheckBox
+            android:id="@+id/testThemaAnswerB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:text="textAnswerB"
+            android:theme="@style/CheckBoxTheme"
+            android:textColor="@color/colorBlack" />
+
+        <CheckBox
+            android:id="@+id/testThemaAnswerC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:text="textAnswerC"
+            android:theme="@style/CheckBoxTheme"
+            android:textColor="@color/colorBlack" />
+
+        <CheckBox
+            android:id="@+id/testThemaAnswerD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:text="textAnswerD"
+            android:theme="@style/CheckBoxTheme"
+            android:textColor="@color/colorBlack" />
+
+        <ImageView
+            android:id="@+id/testImgQestion"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="50dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnTestPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/mybutton"
+            android:layout_alignParentStart="true"
+            android:text="Bisherige"/>
+
+        <Button
+            android:id="@+id/btnTestNext"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/mybutton"
+            android:layout_alignParentEnd="true"
+            android:text="Nächster" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -9,16 +9,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.dt.lebenindeutschland.MainActivity
 import com.dt.lebenindeutschland.R
 import com.dt.lebenindeutschland.data.Thema
 import com.dt.lebenindeutschland.data.ThemaData
 import com.dt.lebenindeutschland.data.selectedThema
 
-class ThemaRecycleviewAdapter(private val list: List<ThemaData>) :
-    RecyclerView.Adapter<ThemaRecycleviewAdapter.ViewHolder>() {
+class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
+    RecyclerView.Adapter<LearningRecycleviewAdapter.ViewHolder>() {
 
     lateinit var context: Context
 
@@ -40,9 +38,9 @@ class ThemaRecycleviewAdapter(private val list: List<ThemaData>) :
     override fun onBindViewHolder(holder: ViewHolder, i: Int) {
         holder.themaLearnTxtName.text = list[i].themaName
         if (i % 2 == 0) {
-            holder.parent.setCardBackgroundColor(Color.rgb(255, 230, 254))
+            holder.parent.setCardBackgroundColor(Color.rgb(250, 250, 250))
         } else {
-            holder.parent.setCardBackgroundColor(Color.rgb(219, 255, 251))
+            holder.parent.setCardBackgroundColor(Color.rgb(245, 245, 245))
         }
     }
 

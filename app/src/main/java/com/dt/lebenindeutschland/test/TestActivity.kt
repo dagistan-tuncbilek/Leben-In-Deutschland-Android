@@ -8,7 +8,10 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dt.lebenindeutschland.MainActivity
 import com.dt.lebenindeutschland.R
+import com.dt.lebenindeutschland.SelectStateActivity
+import com.dt.lebenindeutschland.data.State
 import com.dt.lebenindeutschland.data.getThemasData
+import com.dt.lebenindeutschland.selectedState
 import kotlinx.android.synthetic.main.activity_test.*
 
 class TestActivity : AppCompatActivity(), View.OnClickListener {
@@ -20,10 +23,12 @@ class TestActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test)
+        initialize()
+    }
 
+    private fun initialize() {
         linearLayoutManager = LinearLayoutManager(this)
         testRecyclerView.layoutManager = linearLayoutManager
-
         adapter = TestRecycleviewAdapter(getThemasData())
         testRecyclerView.adapter = adapter
         backArrow = findViewById(R.id.testBackArrow)
