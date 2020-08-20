@@ -1,6 +1,7 @@
 package com.dt.lebenindeutschland.learn
 
-import Question
+import com.dt.lebenindeutschland.data.Question
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -34,51 +35,52 @@ class LearnThemaRecycleviewAdapter(private val list: List<Question>) :
         return list.count()
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, i: Int) {
-        holder.themaTextQuestion.setText("${i+1}. ${list.get(i).question}")
-        holder.themaTextAnswerA.setText("A. ${list.get(i).answerA}")
-        holder.themaTextAnswerB.setText("B. ${list.get(i).answerB}")
-        holder.themaTextAnswerC.setText("C. ${list.get(i).answerC}")
-        holder.themaTextAnswerD.setText("D. ${list.get(i).answerD}")
+        holder.themaTextQuestion.text = "${i+1}. ${list[i].question}"
+        holder.themaTextAnswerA.text = "A. ${list[i].answerA}"
+        holder.themaTextAnswerB.text = "B. ${list[i].answerB}"
+        holder.themaTextAnswerC.text = "C. ${list[i].answerC}"
+        holder.themaTextAnswerD.text = "D. ${list[i].answerD}"
 
-        when (list.get(i).trueAnswer) {
-            'A' -> {
+        when (list[i].trueAnswer) {
+            "A" -> {
                 holder.themaTextAnswerA.setBackgroundColor(Color.rgb(207, 255, 254))
                 holder.themaTextAnswerB.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerC.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerD.setBackgroundColor(Color.WHITE)
             }
-            'B' -> {
+            "B" -> {
                 holder.themaTextAnswerB.setBackgroundColor(Color.rgb(207, 255, 254))
                 holder.themaTextAnswerA.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerC.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerD.setBackgroundColor(Color.WHITE)
             }
-            'C' -> {
+            "C" -> {
                 holder.themaTextAnswerC.setBackgroundColor(Color.rgb(207, 255, 254))
                 holder.themaTextAnswerB.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerA.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerD.setBackgroundColor(Color.WHITE)
             }
-            'D' -> {
+            "D" -> {
                 holder.themaTextAnswerD.setBackgroundColor(Color.rgb(207, 255, 254))
                 holder.themaTextAnswerB.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerC.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerA.setBackgroundColor(Color.WHITE)
             }
         }
-        if (list.get(i).hasPhoto) {
-            holder.themaImgQestion.setVisibility(View.VISIBLE)
-            val imageName = "i${list.get(i).id}"
-            var number : Int = context.resources.getIdentifier(
+        if (list[i].hasPhoto) {
+            holder.themaImgQestion.visibility = View.VISIBLE
+            val imageName = "i${list[i].id}"
+            val number : Int = context.resources.getIdentifier(
                 imageName,
                 "drawable",
                 context.packageName
             )
-            val res = context.resources.getDrawable(number)
+            @Suppress("DEPRECATION") val res = context.resources.getDrawable(number)
             holder.themaImgQestion.setImageDrawable(res)
         } else {
-            holder.themaImgQestion.setVisibility(View.GONE)
+            holder.themaImgQestion.visibility = View.GONE
         }
     }
 

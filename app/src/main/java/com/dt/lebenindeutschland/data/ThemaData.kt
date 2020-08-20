@@ -7,19 +7,20 @@ data class ThemaData(
     var percentage: String = "$max/$progress"
 )
 
-fun getThemasData(): List<ThemaData> {
-    return listOf(
+fun getThemasData(): ArrayList<ThemaData> {
+
+    return arrayListOf(
         ThemaData("Land/Staat", 10, 0),
         ThemaData("Verfassungsorgane", 31, 0),
         ThemaData("Verfassungsprinzipien", 22, 0),
         ThemaData("Föderalismus", 8, 0),
         ThemaData("Sozialsystem", 8, 0),
         ThemaData("Grundrechte", 22, 0),
-        ThemaData("Wahlen und Beteiligung", 30, 17),
+        ThemaData("Wahlen und Beteiligung", 30, 0),
         ThemaData("Parteien", 7, 0),
         ThemaData("Aufgaben des Staates", 4, 0),
-        ThemaData("Staatssymbole", 6, 0),
-        ThemaData("Pflichten", 8, 0),
+        ThemaData("Pflichten", 6, 0),
+        ThemaData("Staatssymbole", 8, 0),
         ThemaData("Kommune", 10, 0),
         ThemaData("Recht und Alltag", 36, 0),
         ThemaData("Der Nationalsozialismus und seine Folgen", 20, 0),

@@ -1,13 +1,16 @@
+package com.dt.lebenindeutschland.data
+
 data class Question (
-		val id: Int,
-		val question: String,
-		val answerA: String,
-		val answerB: String,
-		val answerC: String,
-		val answerD: String,
-		val thema: String,
-		val trueAnswer: Char,
-		val succes: String,
-		val hasPhoto: Boolean,
-		var learned: Boolean = false
+	val id: Int,
+	val question: String,
+	val answerA: String,
+	val answerB: String,
+	val answerC: String,
+	val answerD: String,
+	val thema: String,
+	val themaId: Int,
+	val trueAnswer: String,
+	val success: String,
+	val hasPhoto: Boolean,
+	var isLearned: Boolean = false
 )

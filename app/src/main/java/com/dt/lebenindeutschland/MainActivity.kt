@@ -3,18 +3,19 @@ package com.dt.lebenindeutschland
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.cardview.widget.CardView
-import com.dt.lebenindeutschland.data.State
+import com.dt.lebenindeutschland.data.*
 import com.dt.lebenindeutschland.learn.LearningActivity
 import com.dt.lebenindeutschland.test.TestActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
-    lateinit var mainCardViewLearning : CardView
-    lateinit var mainCardViewTest : CardView
-    lateinit var mainCardViewExam : CardView
-    lateinit var mainCardViewSelectState : CardView
+    private lateinit var mainCardViewLearning : CardView
+    private lateinit var mainCardViewTest : CardView
+    private lateinit var mainCardViewExam : CardView
+    private lateinit var mainCardViewSelectState : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     }
 
     override fun onClick(v: View?) {
+        Log.d(TAG, "Clicked")
         if (v != null) {
             when(v.id){
                 R.id.mainCardViewLearning -> startActivity(Intent(this, LearningActivity::class.java))
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     }
 
     private fun initialize() {
+        Log.d(TAG, "initileized")
         mainCardViewLearning = findViewById(R.id.mainCardViewLearning)
         mainCardViewLearning.setOnClickListener(this)
         mainCardViewTest = findViewById(R.id.mainCardViewTest)
@@ -42,5 +45,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         mainCardViewExam.setOnClickListener(this)
         mainCardViewSelectState = findViewById(R.id.mainCardViewSelectState)
         mainCardViewSelectState.setOnClickListener(this)
+
+    }
+
+    companion object {
+        private const val TAG = "MainActivity"
     }
 }

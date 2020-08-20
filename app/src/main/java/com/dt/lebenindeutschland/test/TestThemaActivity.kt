@@ -1,6 +1,5 @@
 package com.dt.lebenindeutschland.test
 
-import Question
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
@@ -9,14 +8,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import com.dt.lebenindeutschland.R
-import com.dt.lebenindeutschland.data.Thema
-import com.dt.lebenindeutschland.data.readData
-import com.dt.lebenindeutschland.data.selectedThema
+import com.dt.lebenindeutschland.data.*
 import com.dt.lebenindeutschland.selectedState
 
 class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var questionList: MutableList<Question>
+    private lateinit var questionList: ArrayList<Question>
+    private val db: DataBaseHandler = DataBaseHandler(this)
     private var index: Int = 0
     private var questionChecked: Boolean = false
     private val colorTrue = Color.rgb(197, 255, 168)
@@ -42,8 +40,8 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun createQuestionList() {
-        val remainingQuestionList: List<Question> = getQuestionList().filter { !it.learned }
-        questionList = if (remainingQuestionList.count()>0) remainingQuestionList as MutableList<Question>
+        val remainingQuestionList: List<Question> = getQuestionList().filter { !it.isLearned }
+        questionList = if (remainingQuestionList.count()>0) remainingQuestionList as ArrayList<Question>
                 else getQuestionList()
         setQuestion()
     }
@@ -74,71 +72,83 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
                     testThemaAnswerB.isChecked = false
                     testThemaAnswerC.isChecked = false
                     testThemaAnswerD.isChecked = false
-                    if (questionList[index].trueAnswer == 'A'){
+                    if (questionList[index].trueAnswer == "A"){
                         testThemaAnswerA.setBackgroundColor(colorTrue)
-                        if(!questionChecked) questionList[index].learned = true
+                        setQuestionLearned()
                     } else {
                         testThemaAnswerA.setBackgroundColor(colorFalse)
-                        questionList[index].learned = false
+                        setQuestionNotLearned()
                     }
                     testThemaAnswerB.setBackgroundColor(colorWhite)
                     testThemaAnswerC.setBackgroundColor(colorWhite)
                     testThemaAnswerD.setBackgroundColor(colorWhite)
-                    if(!questionChecked) questionChecked = true
                 }
                 R.id.testThemaAnswerB -> {
                     testThemaAnswerA.isChecked = false
                     testThemaAnswerB.isChecked = true
                     testThemaAnswerC.isChecked = false
                     testThemaAnswerD.isChecked = false
-                    if (questionList[index].trueAnswer == 'B'){
+                    if (questionList[index].trueAnswer == "B"){
                         testThemaAnswerB.setBackgroundColor(colorTrue)
-                        if(!questionChecked) questionList[index].learned = true
+                        setQuestionLearned()
                     } else {
                         testThemaAnswerB.setBackgroundColor(colorFalse)
-                        questionList[index].learned = false
+                        setQuestionNotLearned()
                     }
                     testThemaAnswerA.setBackgroundColor(colorWhite)
                     testThemaAnswerC.setBackgroundColor(colorWhite)
                     testThemaAnswerD.setBackgroundColor(colorWhite)
-                    if(!questionChecked) questionChecked = true
                 }
                 R.id.testThemaAnswerC -> {
                     testThemaAnswerA.isChecked = false
                     testThemaAnswerB.isChecked = false
                     testThemaAnswerC.isChecked = true
                     testThemaAnswerD.isChecked = false
-                    if (questionList[index].trueAnswer == 'C'){
+                    if (questionList[index].trueAnswer == "C"){
                         testThemaAnswerC.setBackgroundColor(colorTrue)
-                        if(!questionChecked) questionList[index].learned = true
+                        setQuestionLearned()
                     } else {
                         testThemaAnswerC.setBackgroundColor(colorFalse)
-                        questionList[index].learned = false
+                        setQuestionNotLearned()
                     }
                     testThemaAnswerB.setBackgroundColor(colorWhite)
                     testThemaAnswerA.setBackgroundColor(colorWhite)
                     testThemaAnswerD.setBackgroundColor(colorWhite)
-                    if(!questionChecked) questionChecked = true
                 }
                 R.id.testThemaAnswerD -> {
                     testThemaAnswerA.isChecked = false
                     testThemaAnswerB.isChecked = false
                     testThemaAnswerC.isChecked = false
                     testThemaAnswerD.isChecked = true
-                    if (questionList[index].trueAnswer == 'D'){
+                    if (questionList[index].trueAnswer == "D"){
                         testThemaAnswerD.setBackgroundColor(colorTrue)
-                        if(!questionChecked) questionList[index].learned = true
+                        setQuestionLearned()
                     } else {
                         testThemaAnswerD.setBackgroundColor(colorFalse)
-                        questionList[index].learned = false
+                        setQuestionNotLearned()
                     }
                     testThemaAnswerB.setBackgroundColor(colorWhite)
                     testThemaAnswerC.setBackgroundColor(colorWhite)
                     testThemaAnswerA.setBackgroundColor(colorWhite)
-                    if(!questionChecked) questionChecked = true
                 }
             }
         }
+    }
+
+    private fun setQuestionNotLearned() {
+        if (questionList[index].isLearned == true) {
+            questionList[index].isLearned = false
+            db.updateData(questionList[index].id, false)
+        }
+        questionChecked = true
+    }
+
+    private fun setQuestionLearned() {
+        if (questionList[index].isLearned == false && !questionChecked) {
+            questionList[index].isLearned = true
+            db.updateData(questionList[index].id, true)
+        }
+        questionChecked = true
     }
 
     @SuppressLint("SetTextI18n", "UseCompatLoadingForDrawables")
@@ -152,7 +162,7 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         testThemaAnswerB.setBackgroundColor(colorWhite)
         testThemaAnswerC.setBackgroundColor(colorWhite)
         testThemaAnswerD.setBackgroundColor(colorWhite)
-        testThemaQuestion.text = "*  ${questionList[index].question}"
+        testThemaQuestion.text = "${questionList[index].id}  ${questionList[index].question}"
         testThemaAnswerA.text = " A. ${questionList[index].answerA}"
         testThemaAnswerB.text = " B. ${questionList[index].answerB}"
         testThemaAnswerC.text = " C. ${questionList[index].answerC}"
@@ -170,10 +180,9 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         } else {
             testImgQestion.visibility = View.GONE
         }
+        questionChecked = false
     }
-
-
-
+    
     private fun initialize() {
         testThemaSubText = findViewById(R.id.testThemaSubText)
         testThemaSubText.setOnClickListener(this)
@@ -194,21 +203,11 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         testThemaBackArrow = findViewById(R.id.testThemaBackArrow)
         testThemaBackArrow.setOnClickListener(this)
     }
-}
 
-private fun getQuestionList(): MutableList<Question> {
-    val questionList: List<Question> = readData()
-    val selectedList: MutableList<Question> = mutableListOf()
-    if (selectedThema == Thema.BUNDESLANDER){
-        for (i in 0..9){
-            selectedList.add(questionList[selectedState.getQuestionNumber() + i])
-        }
-    } else {
-        for (question in questionList){
-            if (selectedThema.getThemaName() == question.thema){
-                selectedList.add(question)
-            }
-        }
+    private fun getQuestionList(): ArrayList<Question> {
+        return if (selectedThema == Thema.BUNDESLANDER)
+            db.readSelectedData(IntArray(10, { it + selectedState.getQuestionNumber() + 1 }))
+         else
+            db.readSelectedData(selectedThema.getThemaQuestionIdList())
     }
-    return selectedList
 }

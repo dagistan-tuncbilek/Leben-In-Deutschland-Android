@@ -2,6 +2,7 @@ package com.dt.lebenindeutschland
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
@@ -9,27 +10,27 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.dt.lebenindeutschland.data.State
 
-var selectedState: State = State.NOT_SELECTED;
+var selectedState: State = State.NOT_SELECTED
 
 class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var stateBackArrow: ImageView
-    lateinit var cardBaden: CardView
-    lateinit var cardBayern: CardView
-    lateinit var cardBerlin: CardView
-    lateinit var cardBrandenburg: CardView
-    lateinit var cardBremen: CardView
-    lateinit var cardHamburg: CardView
-    lateinit var cardHessen: CardView
-    lateinit var cardMeklenburg: CardView
-    lateinit var cardNiedersachsen: CardView
-    lateinit var cardNW: CardView
-    lateinit var cardRheinland: CardView
-    lateinit var cardSachsen: CardView
-    lateinit var cardSachsenAnhalt: CardView
-    lateinit var cardSaarland: CardView
-    lateinit var cardSchlewsig: CardView
-    lateinit var cardThrungen: CardView
+    private lateinit var stateBackArrow: ImageView
+    private lateinit var cardBaden: CardView
+    private lateinit var cardBayern: CardView
+    private lateinit var cardBerlin: CardView
+    private lateinit var cardBrandenburg: CardView
+    private lateinit var cardBremen: CardView
+    private lateinit var cardHamburg: CardView
+    private lateinit var cardHessen: CardView
+    private lateinit var cardMeklenburg: CardView
+    private lateinit var cardNiedersachsen: CardView
+    private lateinit var cardNW: CardView
+    private lateinit var cardRheinland: CardView
+    private lateinit var cardSachsen: CardView
+    private lateinit var cardSachsenAnhalt: CardView
+    private lateinit var cardSaarland: CardView
+    private lateinit var cardSchlewsig: CardView
+    private lateinit var cardThrungen: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +40,7 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         if (v != null) {
-            when(v.id){
+            when (v.id) {
                 R.id.cardBaden -> selectedState = State.BADEN_WURTTEMBERG
                 R.id.cardBayern -> selectedState = State.BAYERN
                 R.id.cardBerlin -> selectedState = State.BERLIN
@@ -58,14 +59,17 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
                 R.id.cardThrungen -> selectedState = State.THURINGEN
             }
         }
-        if (selectedState == State.NOT_SELECTED){
-            Toast.makeText(applicationContext, "Bitte wahlen Sie ein Thema", Toast.LENGTH_SHORT).show()
+        Log.d(TAG, " clicked")
+        if (selectedState == State.NOT_SELECTED) {
+            Toast.makeText(applicationContext, "Bitte wahlen Sie ein Thema", Toast.LENGTH_SHORT)
+                .show()
         } else {
             Toast.makeText(
                 applicationContext,
                 selectedState.getStateName() + " gewahlt",
                 Toast.LENGTH_SHORT
             ).show()
+            Log.d(TAG, " Main activity started")
             startActivity(Intent(this, MainActivity::class.java))
         }
     }
@@ -74,6 +78,7 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
         if (selectedState == State.NOT_SELECTED) {
             Toast.makeText(applicationContext, "Bitte wahlen Sie ein Thema", Toast.LENGTH_SHORT)
                 .show()
+            Log.d(TAG, " backpress suspended")
             return
         } else {
             finish()
@@ -115,7 +120,10 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
         cardSchlewsig.setOnClickListener(this)
         cardThrungen = findViewById(R.id.cardThrungen)
         cardThrungen.setOnClickListener(this)
+        Log.d(TAG, " initileized")
     }
 
-
+    companion object {
+        private const val TAG = "SelectStateActivity"
+    }
 }

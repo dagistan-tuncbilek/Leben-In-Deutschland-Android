@@ -78,8 +78,8 @@ class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
                     19 -> selectedThema = Thema.MIGRATIONSGESCHICHTE
                     20 -> selectedThema = Thema.INTERKULTURELLES
                 }
-                v.getContext().startActivity(Intent(parent.context, ThemaActivity::class.java))
-                Toast.makeText(parent.context, "${selectedThema.getThemaName()}", Toast.LENGTH_SHORT)
+                v.context.startActivity(Intent(parent.context, ThemaActivity::class.java))
+                Toast.makeText(parent.context, selectedThema.getThemaName(), Toast.LENGTH_SHORT)
                     .show()
             }
         }

@@ -1,6 +1,6 @@
 package com.dt.lebenindeutschland.learn
 
-import Question
+import com.dt.lebenindeutschland.data.Question
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -8,17 +8,18 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dt.lebenindeutschland.R
+import com.dt.lebenindeutschland.data.DataBaseHandler
 import com.dt.lebenindeutschland.data.Thema
 import com.dt.lebenindeutschland.data.selectedThema
 import com.dt.lebenindeutschland.selectedState
 import kotlinx.android.synthetic.main.activity_thema.*
-import com.dt.lebenindeutschland.data.readData
 
 class ThemaActivity : AppCompatActivity(), View.OnClickListener  {
 
     private lateinit var backArrow : ImageView
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var adapter: LearnThemaRecycleviewAdapter
+    private val db: DataBaseHandler = DataBaseHandler(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,21 +44,13 @@ class ThemaActivity : AppCompatActivity(), View.OnClickListener  {
             }
         }
     }
-}
 
-private fun getQuestionList(): List<Question> {
-    val questionList: List<Question> = readData()
-    var selectedList: MutableList<Question> = mutableListOf()
-    if (selectedThema == Thema.BUNDESLANDER){
-        for (i in 0..9){
-            selectedList.add(questionList.get(selectedState.getQuestionNumber() + i))
-        }
-    } else {
-        for (question in questionList){
-            if (selectedThema.getThemaName() == question.thema){
-                selectedList.add(question)
-            }
+    private fun getQuestionList(): ArrayList<Question> {
+        return if (selectedThema == Thema.BUNDESLANDER)
+            db.readSelectedData(IntArray(10){ it + selectedState.getQuestionNumber() +1 })
+        else {
+            db.readDataWithThemaId(selectedThema.getThemaID())
         }
     }
-    return selectedList
 }
+
