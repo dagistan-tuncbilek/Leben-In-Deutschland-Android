@@ -1,4 +1,4 @@
-package com.dt.lebenindeutschland.data
+package com.dt.lebenindeutschland.utility
 
 var selectedThema: Thema = Thema.BUNDESLANDER
 

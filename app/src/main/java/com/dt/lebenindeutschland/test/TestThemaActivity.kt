@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import com.dt.lebenindeutschland.R
-import com.dt.lebenindeutschland.data.*
+import com.dt.lebenindeutschland.utility.*
 import com.dt.lebenindeutschland.selectedState
 
 class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
@@ -30,6 +30,7 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btnTestPrevious: Button
     private lateinit var btnTestNext: Button
     private lateinit var testThemaBackArrow: ImageView
+    private lateinit var testThemaSuccessText: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -136,7 +137,7 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setQuestionNotLearned() {
-        if (questionList[index].isLearned == true) {
+        if (questionList[index].isLearned) {
             questionList[index].isLearned = false
             db.updateData(questionList[index].id, false)
         }
@@ -144,7 +145,7 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setQuestionLearned() {
-        if (questionList[index].isLearned == false && !questionChecked) {
+        if (!questionList[index].isLearned && !questionChecked) {
             questionList[index].isLearned = true
             db.updateData(questionList[index].id, true)
         }
@@ -153,7 +154,8 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
 
     @SuppressLint("SetTextI18n", "UseCompatLoadingForDrawables")
     private fun setQuestion() {
-        testThemaSubText.text = selectedThema.getThemaName()
+        if (selectedThema == Thema.BUNDESLANDER) testThemaSubText.text = selectedState.getStateName()
+        else testThemaSubText.text = selectedThema.getThemaName()
         testThemaAnswerA.isChecked = false
         testThemaAnswerB.isChecked = false
         testThemaAnswerC.isChecked = false
@@ -162,11 +164,12 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         testThemaAnswerB.setBackgroundColor(colorWhite)
         testThemaAnswerC.setBackgroundColor(colorWhite)
         testThemaAnswerD.setBackgroundColor(colorWhite)
-        testThemaQuestion.text = "${questionList[index].id}  ${questionList[index].question}"
+        testThemaQuestion.text = "${questionList[index].question}"
         testThemaAnswerA.text = " A. ${questionList[index].answerA}"
         testThemaAnswerB.text = " B. ${questionList[index].answerB}"
         testThemaAnswerC.text = " C. ${questionList[index].answerC}"
         testThemaAnswerD.text = " D. ${questionList[index].answerD}"
+        testThemaSuccessText.text = "Erfolgsprozentsatz in der tatsächlichen Prüfung ist ${questionList[index].success}"
         if (questionList[index].hasPhoto) {
             testImgQestion.visibility = View.VISIBLE
             val imageName = "i${questionList[index].id}"
@@ -202,11 +205,12 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         btnTestNext.setOnClickListener(this)
         testThemaBackArrow = findViewById(R.id.testThemaBackArrow)
         testThemaBackArrow.setOnClickListener(this)
+        testThemaSuccessText = findViewById(R.id.testThemaSuccessText)
     }
 
     private fun getQuestionList(): ArrayList<Question> {
         return if (selectedThema == Thema.BUNDESLANDER)
-            db.readSelectedData(IntArray(10, { it + selectedState.getQuestionNumber() + 1 }))
+            db.readSelectedData(IntArray(10){ it + selectedState.ordinal*10 + 301 })
          else
             db.readSelectedData(selectedThema.getThemaQuestionIdList())
     }

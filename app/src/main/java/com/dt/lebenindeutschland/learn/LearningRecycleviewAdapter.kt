@@ -11,9 +11,9 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.dt.lebenindeutschland.R
-import com.dt.lebenindeutschland.data.Thema
-import com.dt.lebenindeutschland.data.ThemaData
-import com.dt.lebenindeutschland.data.selectedThema
+import com.dt.lebenindeutschland.utility.Thema
+import com.dt.lebenindeutschland.utility.ThemaData
+import com.dt.lebenindeutschland.utility.selectedThema
 
 class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
     RecyclerView.Adapter<LearningRecycleviewAdapter.ViewHolder>() {

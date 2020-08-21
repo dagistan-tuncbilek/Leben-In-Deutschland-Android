@@ -1,4 +1,4 @@
-package com.dt.lebenindeutschland.data
+package com.dt.lebenindeutschland.utility
 
 data class Question (
 	val id: Int,

@@ -9,9 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dt.lebenindeutschland.MainActivity
 import com.dt.lebenindeutschland.R
-import com.dt.lebenindeutschland.data.DataBaseHandler
-import com.dt.lebenindeutschland.data.ThemaData
-import com.dt.lebenindeutschland.data.getThemasData
+import com.dt.lebenindeutschland.utility.DataBaseHandler
+import com.dt.lebenindeutschland.utility.ThemaData
+import com.dt.lebenindeutschland.utility.getThemasData
+import com.dt.lebenindeutschland.selectedState
 import kotlinx.android.synthetic.main.activity_test.*
 
 class TestActivity : AppCompatActivity(), View.OnClickListener {
@@ -38,10 +39,12 @@ class TestActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun createThemaData(): ArrayList<ThemaData> {
         val testResultsById = DataBaseHandler(this).readTestResults()
-        var themaDataById : ArrayList<ThemaData> = getThemasData()
+        val themaDataById : ArrayList<ThemaData> = getThemasData()
+        val arrayList = IntArray(10) { it + selectedState.ordinal*10 + 301 }
         for (i in testResultsById.indices){
             if (testResultsById[i].isLearned){
-                themaDataById[testResultsById[i].themaId].progress++
+                if (testResultsById[i].themaId != 0) themaDataById[testResultsById[i].themaId].progress++
+                else if (arrayList.contains(i+1) && testResultsById[i].isLearned) themaDataById[0].progress++
             }
         }
         return themaDataById

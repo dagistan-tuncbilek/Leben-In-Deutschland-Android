@@ -1,4 +1,4 @@
-package com.dt.lebenindeutschland.data
+package com.dt.lebenindeutschland.utility
 
 class RawData {
     fun createData(): ArrayList<Question> {
@@ -926,7 +926,7 @@ class RawData {
 				"Staatssymbole", 10,
 				"D",
 				"78,0%",
-				false
+				true
 			)
 		)
         list.add(
@@ -2799,7 +2799,8 @@ class RawData {
 				"Schleswig-Holstein",
 				"Mecklenburg-Vorpommern",
 				"Saarland",
-				"Wiedervereinigung", 15,
+				"Wiedervereinigung",
+				15,
 				"C",
 				"82,2%",
 				false
@@ -4213,7 +4214,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"A",
 				"94,0%",
 				true
@@ -4227,7 +4228,7 @@ class RawData {
 				"Neckar-Odenwald-Kreis",
 				"Nordfriesland",
 				"Altötting",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"B",
 				"92,5%",
 				false
@@ -4241,7 +4242,7 @@ class RawData {
 				"4",
 				"5",
 				"6",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"C",
 				"66,1%",
 				false
@@ -4255,7 +4256,7 @@ class RawData {
 				"16",
 				"18",
 				"20",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"B",
 				"90,2%",
 				false
@@ -4269,7 +4270,7 @@ class RawData {
 				"schwarz-gold",
 				"weiß-blau",
 				"grün-weiß-rot",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"B",
 				"90,6%",
 				false
@@ -4283,7 +4284,7 @@ class RawData {
 				"bei der Verbraucherzentrale",
 				"bei der Landeszentrale für politische Bildung",
 				"bei den Kirchen",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"C",
 				"90,3%",
 				false
@@ -4297,7 +4298,7 @@ class RawData {
 				"Stuttgart.",
 				"Karlsruhe.",
 				"Mannheim.",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"B",
 				"96,2%",
 				false
@@ -4311,7 +4312,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"B",
 				"90,9%",
 				true
@@ -4325,7 +4326,7 @@ class RawData {
 				"Premierminister / Premierministerin",
 				"Bürgermeister / Bürgermeisterin",
 				"Ministerpräsident / Ministerpräsidentin",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"D",
 				"87,0%",
 				false
@@ -4339,7 +4340,7 @@ class RawData {
 				"Justizminister / Justizministerin",
 				"Innenminister / Innenministerin",
 				"Außenminister / Außenministerin",
-				"Baden-Württemberg", 0,
+				"Baden Württemberg", 0,
 				"D",
 				"88,7%",
 				false
@@ -5193,7 +5194,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"C",
 				"91,1%",
 				true
@@ -5207,7 +5208,7 @@ class RawData {
 				"Demmin",
 				"Vogtlandkreis",
 				"Rhein-Sieg-Kreis",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"B",
 				"88,5%",
 				false
@@ -5221,7 +5222,7 @@ class RawData {
 				"4",
 				"5",
 				"6",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"C",
 				"70,1%",
 				false
@@ -5235,7 +5236,7 @@ class RawData {
 				"16",
 				"18",
 				"20",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"B",
 				"74,9%",
 				false
@@ -5249,7 +5250,7 @@ class RawData {
 				"blau-weiß-gelb-rot",
 				"grün-weiß-rot",
 				"schwarz-gelb",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"B",
 				"85,2%",
 				false
@@ -5263,7 +5264,7 @@ class RawData {
 				"bei den Kirchen",
 				"beim Ordnungsamt der Gemeinde",
 				"bei der Verbraucherzentrale",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"A",
 				"93,2%",
 				false
@@ -5277,7 +5278,7 @@ class RawData {
 				"Schwerin.",
 				"Rostock.",
 				"Wismar.",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"B",
 				"93,8%",
 				false
@@ -5291,7 +5292,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"C",
 				"91,6%",
 				true
@@ -5305,7 +5306,7 @@ class RawData {
 				"Premierminister / Premierministerin",
 				"Bürgermeister / Bürgermeisterin",
 				"Ministerpräsident / Ministerpräsidentin",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"D",
 				"88,0%",
 				false
@@ -5319,7 +5320,7 @@ class RawData {
 				"Außenminister / Außenministerin",
 				"Finanzminister / Finanzministerin",
 				"Innenminister / Innenministerin",
-				"Mecklenburg-Vorpommern", 0,
+				"Mecklenburg Vorpommern", 0,
 				"B",
 				"89,8%",
 				false
@@ -5473,10 +5474,10 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"B",
 				"97,9%",
-				false
+				true
 			)
 		)
         list.add(
@@ -5487,7 +5488,7 @@ class RawData {
 				"Rhein-Sieg-Kreis",
 				"Nordfriesland",
 				"Vogtlandkreis",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"B",
 				"93,3%",
 				false
@@ -5501,7 +5502,7 @@ class RawData {
 				"4",
 				"5",
 				"6",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"C",
 				"68,7%",
 				false
@@ -5515,7 +5516,7 @@ class RawData {
 				"16",
 				"18",
 				"20",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"B",
 				"77,4%",
 				false
@@ -5529,7 +5530,7 @@ class RawData {
 				"grün-weiß-rot",
 				"schwarz-gold",
 				"blau-weiß-rot",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"B",
 				"92,4%",
 				false
@@ -5543,7 +5544,7 @@ class RawData {
 				"beim Ordnungsamt der Gemeinde",
 				"bei der Verbraucherzentrale",
 				"bei der Landeszentrale für politische Bildung",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"D",
 				"92,7%",
 				false
@@ -5557,7 +5558,7 @@ class RawData {
 				"Bonn.",
 				"Düsseldorf.",
 				"Dortmund.",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"C",
 				"95,2%",
 				false
@@ -5571,7 +5572,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"C",
 				"92,5%",
 				true
@@ -5585,7 +5586,7 @@ class RawData {
 				"Premierminister / Premierministerin",
 				"Bürgermeister / Bürgermeisterin",
 				"Ministerpräsident / Ministerpräsidentin",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"D",
 				"85,9%",
 				false
@@ -5599,7 +5600,7 @@ class RawData {
 				"Außenminister / Außenministerin",
 				"Finanzminister / Finanzministerin",
 				"Innenminister / Innenministerin",
-				"Nordrhein-Westfalen", 0,
+				"Nordrhein Westfalen", 0,
 				"B",
 				"87,5%",
 				false
@@ -5613,7 +5614,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"A",
 				"97,2%",
 				true
@@ -5627,7 +5628,7 @@ class RawData {
 				"Altötting",
 				"Emsland",
 				"Prignitz",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"A",
 				"92,7%",
 				false
@@ -5641,7 +5642,7 @@ class RawData {
 				"4",
 				"5",
 				"6",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"C",
 				"68,4%",
 				false
@@ -5655,7 +5656,7 @@ class RawData {
 				"16",
 				"18",
 				"20",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"C",
 				"94,4%",
 				false
@@ -5669,7 +5670,7 @@ class RawData {
 				"schwarz-rot-gold",
 				"schwarz-gelb",
 				"grün-weiß-rot",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"B",
 				"88,1%",
 				false
@@ -5683,7 +5684,7 @@ class RawData {
 				"bei der Verbraucherzentrale",
 				"beim Ordnungsamt der Gemeinde",
 				"bei der Landeszentrale für politische Bildung",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"D",
 				"92,2%",
 				false
@@ -5697,7 +5698,7 @@ class RawData {
 				"Kaiserslautern.",
 				"Ludwigshafen.",
 				"Koblenz.",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"A",
 				"97,4%",
 				false
@@ -5711,7 +5712,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"A",
 				"89,6%",
 				true
@@ -5725,7 +5726,7 @@ class RawData {
 				"Premierminister / Premierministerin",
 				"Bürgermeister / Bürgermeisterin",
 				"Ministerpräsident / Ministerpräsidentin",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"D",
 				"85,8%",
 				false
@@ -5739,7 +5740,7 @@ class RawData {
 				"Außenminister / Außenministerin",
 				"Finanzminister / Finanzministerin",
 				"Innenminister / Innenministerin",
-				"Rheinland-Pfalz", 0,
+				"Rheinland Pfalz", 0,
 				"B",
 				"88,3%",
 				false
@@ -6033,7 +6034,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"D",
 				"94,5%",
 				true
@@ -6047,7 +6048,7 @@ class RawData {
 				"Altötting",
 				"Uckermark",
 				"Börde",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"D",
 				"90,3%",
 				false
@@ -6061,7 +6062,7 @@ class RawData {
 				"4",
 				"5",
 				"6",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"C",
 				"69,6%",
 				false
@@ -6075,7 +6076,7 @@ class RawData {
 				"16",
 				"18",
 				"20",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"B",
 				"77,1%",
 				false
@@ -6089,7 +6090,7 @@ class RawData {
 				"gelb-schwarz",
 				"grün-weiß-rot",
 				"weiß-rot",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"B",
 				"86,5%",
 				false
@@ -6103,7 +6104,7 @@ class RawData {
 				"bei der Landeszentrale für politische Bildung",
 				"beim Ordnungsamt der Gemeinde",
 				"bei der Verbraucherzentrale",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"B",
 				"94,4%",
 				false
@@ -6117,7 +6118,7 @@ class RawData {
 				"Dessau.",
 				"Magdeburg.",
 				"Wittenberg.",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"C",
 				"97,9%",
 				false
@@ -6131,7 +6132,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"C",
 				"92,5%",
 				true
@@ -6145,7 +6146,7 @@ class RawData {
 				"Premierminister / Premierministerin",
 				"Bürgermeister / Bürgermeisterin",
 				"Ministerpräsident / Ministerpräsidentin",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"D",
 				"85,7%",
 				false
@@ -6159,7 +6160,7 @@ class RawData {
 				"Außenminister / Außenministerin",
 				"Finanzminister / Finanzministerin",
 				"Innenminister / Innenministerin",
-				"Sachsen-Anhalt", 0,
+				"Sachsen Anhalt", 0,
 				"B",
 				"88,9%",
 				false
@@ -6173,7 +6174,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"C",
 				"93,8%",
 				true
@@ -6187,7 +6188,7 @@ class RawData {
 				"Demmin",
 				"Nordfriesland",
 				"Rhein-Sieg-Kreis",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"C",
 				"92,7%",
 				false
@@ -6201,7 +6202,7 @@ class RawData {
 				"4",
 				"5",
 				"6",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"C",
 				"69,5%",
 				false
@@ -6215,7 +6216,7 @@ class RawData {
 				"16",
 				"18",
 				"20",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"B",
 				"79,5%",
 				false
@@ -6229,7 +6230,7 @@ class RawData {
 				"blau-weiß-rot",
 				"weiß-rot",
 				"grün-weiß-rot",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"B",
 				"93,0%",
 				false
@@ -6243,7 +6244,7 @@ class RawData {
 				"beim Ordnungsamt der Gemeinde",
 				"bei der Landeszentrale für politische Bildung",
 				"bei den Kirchen",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"C",
 				"92,0%",
 				false
@@ -6257,7 +6258,7 @@ class RawData {
 				"Flensburg.",
 				"Lübeck.",
 				"Kiel.",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"D",
 				"97,4%",
 				false
@@ -6271,7 +6272,7 @@ class RawData {
 				"2",
 				"3",
 				"4",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"A",
 				"94,6%",
 				true
@@ -6285,7 +6286,7 @@ class RawData {
 				"Premierminister / Premierministerin",
 				"Bürgermeister / Bürgermeisterin",
 				"Ministerpräsident / Ministerpräsidentin",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"D",
 				"86,9%",
 				false
@@ -6299,7 +6300,7 @@ class RawData {
 				"Außenminister / Außenministerin",
 				"Finanzminister / Finanzministerin",
 				"Innenminister / Innenministerin",
-				"Schleswig-Holstein", 0,
+				"Schleswig Holstein", 0,
 				"B",
 				"88,5%",
 				false

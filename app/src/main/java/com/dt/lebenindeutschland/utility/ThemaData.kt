@@ -1,10 +1,9 @@
-package com.dt.lebenindeutschland.data
+package com.dt.lebenindeutschland.utility
 
 data class ThemaData(
     var themaName: String,
     var max: Int,
-    var progress: Int,
-    var percentage: String = "$max/$progress"
+    var progress: Int
 )
 
 fun getThemasData(): ArrayList<ThemaData> {

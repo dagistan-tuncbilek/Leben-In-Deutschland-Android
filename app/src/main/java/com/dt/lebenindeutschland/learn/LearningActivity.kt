@@ -1,17 +1,14 @@
 package com.dt.lebenindeutschland.learn
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dt.lebenindeutschland.MainActivity
 import com.dt.lebenindeutschland.R
-import com.dt.lebenindeutschland.SelectStateActivity
-import com.dt.lebenindeutschland.data.State
-import com.dt.lebenindeutschland.data.getThemasData
-import com.dt.lebenindeutschland.selectedState
+import com.dt.lebenindeutschland.utility.getThemasData
 import kotlinx.android.synthetic.main.activity_learning.*
 
 class LearningActivity : AppCompatActivity(), View.OnClickListener {

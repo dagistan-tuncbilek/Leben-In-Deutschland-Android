@@ -1,6 +1,6 @@
 package com.dt.lebenindeutschland.learn
 
-import com.dt.lebenindeutschland.data.Question
+import com.dt.lebenindeutschland.utility.Question
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
