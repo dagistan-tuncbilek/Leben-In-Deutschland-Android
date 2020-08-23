@@ -7,61 +7,39 @@
     android:orientation="vertical"
     tools:context=".test.TestThemaActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF388"
-        app:contentInsetEnd="0dp"
-        app:contentInsetStart="0dp">
+        android:orientation="horizontal"
+        android:background="#FFF388">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/testThemaBackArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/backarrow"
+            android:src="@drawable/ic_back_24"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/testThemaToolbar"
+            android:layout_width="0dp"
+            android:layout_weight="17"
             android:layout_height="wrap_content"
-            android:padding="0dp">
+            android:paddingStart="10dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:title="@string/test_yourself"
+            app:subtitle="@string/bundeslander"
+            tools:ignore="RtlSymmetry"/>
 
-            <ImageView
-                android:id="@+id/testThemaBackArrow"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:contentDescription="@string/backarrow"
-                android:src="@drawable/ic_back_24" />
-
-            <TextView
-                android:id="@+id/testThemaToolText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/testThemaBackArrow"
-                android:text="Testen Sie sich"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                tools:ignore="RelativeOverlap"/>
-
-            <TextView
-                android:id="@+id/testThemaSubText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/testThemaBackArrow"
-                android:text="Staat/Land"
-                android:textColor="@color/colorBlack"
-                android:textSize="15sp"
-                android:textStyle="italic"
-                tools:ignore="RelativeOverlap" />
-
-            <ImageView
-                android:id="@+id/testThemaImg"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="@string/learnlogo"
-                android:src="@drawable/ic_test" />
-        </RelativeLayout>
-    </androidx.appcompat.widget.Toolbar>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_test"
+            android:contentDescription="@string/test_logo" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,9 +57,10 @@
                 android:id="@+id/testThemaQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Question"
+                android:text="@string/dummyText"
                 android:textColor="@color/colorBlack"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/testThemaAnswerA"
@@ -89,9 +68,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/colorWhite"
-                android:text="textAnswerA"
+                android:text="@string/dummyText"
                 android:theme="@style/CheckBoxTheme"
-                android:textColor="@color/colorBlack" />
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/testThemaAnswerB"
@@ -99,9 +79,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/colorWhite"
-                android:text="textAnswerB"
+                android:text="@string/dummyText"
                 android:theme="@style/CheckBoxTheme"
-                android:textColor="@color/colorBlack" />
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/testThemaAnswerC"
@@ -109,9 +90,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/colorWhite"
-                android:text="textAnswerC"
+                android:text="@string/dummyText"
                 android:theme="@style/CheckBoxTheme"
-                android:textColor="@color/colorBlack" />
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/testThemaAnswerD"
@@ -119,9 +101,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/colorWhite"
-                android:text="textAnswerD"
+                android:text="@string/dummyText"
                 android:theme="@style/CheckBoxTheme"
-                android:textColor="@color/colorBlack" />
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"/>
 
         </LinearLayout>
 
@@ -131,7 +114,8 @@
             android:layout_weight="50"
             android:layout_height="200dp"
             android:layout_marginTop="10dp"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:contentDescription="@string/logo" />
     </LinearLayout>
 
     <RelativeLayout
@@ -144,22 +128,23 @@
         <Button
             android:id="@+id/btnTestPrevious"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:padding="10dp"
+            android:layout_height="30dp"
             android:textColor="#ffffff"
             android:background="@drawable/mybutton"
             android:layout_alignParentStart="true"
-            android:text="Bisherige"/>
+            android:text="@string/next"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/btnTestNext"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:padding="10dp"
+            android:layout_height="30dp"
             android:textColor="#ffffff"
             android:background="@drawable/mybutton"
             android:layout_alignParentEnd="true"
-            android:text="Nächster" />
+            android:text="@string/last"
+            android:textAllCaps="false"
+            tools:ignore="RelativeOverlap" />
 
     </RelativeLayout>
 
@@ -169,10 +154,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Erfolgsprozentsatz in der tatsächlichen Prüfung"
+        android:text="@string/success_explanation"
         android:textColor="@color/colorBlack"
         android:textSize="10sp"
         android:textStyle="italic"
-        tools:ignore="RelativeOverlap" />
+        tools:ignore="RelativeOverlap,SmallSp" />
 
 </LinearLayout>

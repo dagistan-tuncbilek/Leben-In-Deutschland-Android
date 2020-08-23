@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exam.ExamActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFF388">
+
+            <ImageView
+                android:id="@+id/examBackArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/backarrow"
+                android:src="@drawable/ic_back_24"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/examToolbar"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp"
+                app:subtitle="@string/citizenship_exam"
+                app:title="@string/trial_exam"
+                tools:ignore="RtlSymmetry"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_exam"
+                android:contentDescription="@string/flag" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/examQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/dummyText"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <CheckBox
+                android:id="@+id/examAnswerA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:text="@string/dummyText"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/CheckBoxTheme"
+                android:textSize="16sp"/>
+
+            <CheckBox
+                android:id="@+id/examAnswerB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:text="@string/dummyText"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/CheckBoxTheme"
+                android:textSize="16sp"/>
+
+            <CheckBox
+                android:id="@+id/examAnswerC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:text="@string/dummyText"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/CheckBoxTheme"
+                android:textSize="16sp"/>
+
+            <CheckBox
+                android:id="@+id/examAnswerD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:text="@string/dummyText"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/CheckBoxTheme"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/examQuestionFoto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:contentDescription="@string/question_picture" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnExamPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/mybutton"
+                android:text="@string/next"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnExamNext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/mybutton"
+                android:text="@string/last"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnExamFinish"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/mybutton"
+            android:backgroundTint="@color/colorGreenDark"
+            android:text="@string/finish_exam"
+            android:textColor="#ffffff"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</ScrollView>

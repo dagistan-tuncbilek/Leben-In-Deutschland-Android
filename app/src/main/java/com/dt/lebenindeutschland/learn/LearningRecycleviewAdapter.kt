@@ -1,5 +1,6 @@
 package com.dt.lebenindeutschland.learn
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -35,10 +36,12 @@ class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
         return list.count()
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, i: Int) {
-        holder.themaLearnTxtName.text = list[i].themaName
+        holder.themaNameLearnTxt.text = list[i].themaName
+        holder.themaCountLearnTxt.text = "${list[i].max} ${context.getString(R.string.question)}"
         if (i % 2 == 0) {
-            holder.parent.setCardBackgroundColor(Color.rgb(250, 250, 250))
+            holder.parent.setCardBackgroundColor(Color.rgb(255, 255, 255))
         } else {
             holder.parent.setCardBackgroundColor(Color.rgb(245, 245, 245))
         }
@@ -47,7 +50,8 @@ class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener {
 
         var parent: CardView = itemView.findViewById(R.id.themaLearnCard)
-        var themaLearnTxtName: TextView = itemView.findViewById(R.id.themaLearnTxtName)
+        var themaNameLearnTxt: TextView = itemView.findViewById(R.id.themaNameLearnTxt)
+        var themaCountLearnTxt: TextView = itemView.findViewById(R.id.themaCountLearnTxt)
 
         init {
             parent.setOnClickListener(this)
@@ -79,8 +83,6 @@ class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
                     20 -> selectedThema = Thema.INTERKULTURELLES
                 }
                 v.context.startActivity(Intent(parent.context, ThemaActivity::class.java))
-                Toast.makeText(parent.context, selectedThema.getThemaName(), Toast.LENGTH_SHORT)
-                    .show()
             }
         }
     }

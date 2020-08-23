@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dt.lebenindeutschland.R
 import com.dt.lebenindeutschland.utility.DataBaseHandler
@@ -20,7 +21,7 @@ class ThemaActivity : AppCompatActivity(), View.OnClickListener  {
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var adapter: LearnThemaRecycleviewAdapter
     private val db: DataBaseHandler = DataBaseHandler(this)
-    private lateinit var themaToolSubText: TextView
+    private lateinit var themaToolbar: Toolbar
     private lateinit var backArrow : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,9 +36,9 @@ class ThemaActivity : AppCompatActivity(), View.OnClickListener  {
     private fun initilaize() {
         adapter = LearnThemaRecycleviewAdapter(getQuestionList())
         themaRecyclerView.adapter = adapter
-        themaToolSubText = findViewById(R.id.themaToolSubText)
-        if (selectedThema == Thema.BUNDESLANDER) themaToolSubText.text = selectedState.getStateName()
-        else themaToolSubText.text = selectedThema.getThemaName()
+        themaToolbar = findViewById(R.id.themaToolbar)
+        if (selectedThema == Thema.BUNDESLANDER) themaToolbar.subtitle = selectedState.getStateName()
+        else themaToolbar.subtitle = selectedThema.getThemaName()
         backArrow = findViewById(R.id.themaBackArrow)
         backArrow.setOnClickListener(this)
     }

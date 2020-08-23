@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,31 +7,43 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/mainToolbar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF388"
-        android:paddingLeft="10dp"
-        app:contentInsetEnd="0dp"
-        app:contentInsetStart="0dp"
-        app:subtitle="Bürgeschaft Prüfung"
-        app:title="Leben In Deutschland"/>
+        android:orientation="horizontal"
+        android:background="#FFF388">
 
-    <ImageView
-        android:id="@+id/mainFlag"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_flag" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mainToolbar"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:subtitle="@string/citizenship_exam"
+            app:title="@string/lid"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/mainFlag"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_flag"
+            android:contentDescription="@string/flag" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background">
 
     <GridLayout
         android:id="@+id/mainGridLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mainToolbar"
-        android:layout_centerHorizontal="true"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:alignmentMode="alignBounds"
         android:columnCount="2"
         android:rowOrderPreserved="false"
@@ -43,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
+            android:layout_gravity="center_vertical"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
@@ -56,15 +68,16 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ic_learn" />
+                    android:src="@drawable/ic_learn"
+                    android:contentDescription="@string/learn_logo" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="145dp"
-                    android:text="Learnen Fragen"
-                    android:textSize="18dp"
+                    android:layout_marginStart="145dp"
+                    android:text="@string/learn_questions"
+                    android:textSize="18sp"
                     android:textStyle="italic|bold" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -75,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
+            android:layout_gravity="center_vertical"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
@@ -88,15 +101,16 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ic_test" />
+                    android:src="@drawable/ic_test"
+                    android:contentDescription="@string/test_logo" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="145dp"
-                    android:text="Testen sich"
-                    android:textSize="18dp"
+                    android:layout_marginStart="145dp"
+                    android:text="@string/test_yourself"
+                    android:textSize="18sp"
                     android:textStyle="italic|bold" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -105,10 +119,8 @@
     <GridLayout
         android:id="@+id/mainGridLayout2"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mainGridLayout1"
-        android:layout_centerHorizontal="true"
-        android:alignmentMode="alignBounds"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:columnCount="2"
         android:rowOrderPreserved="false"
         android:useDefaultMargins="true">
@@ -119,10 +131,10 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            android:layout_gravity="center_vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -132,15 +144,16 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ic_exam" />
+                    android:src="@drawable/ic_exam"
+                    android:contentDescription="@string/test_logo" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="145dp"
-                    android:text="Probeprüfung"
-                    android:textSize="18dp"
+                    android:layout_marginStart="145dp"
+                    android:text="@string/trial_exam"
+                    android:textSize="18sp"
                     android:textStyle="italic|bold" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -152,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
+            android:layout_gravity="center_vertical"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
@@ -165,17 +178,20 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ic_bundeslander" />
+                    android:src="@drawable/ic_bundeslander"
+                    android:contentDescription="@string/select_state" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="145dp"
-                    android:text="Wahlen Sie ein Bundesländer"
-                    android:textSize="18dp"
+                    android:layout_marginStart="145dp"
+                    android:text="@string/select_a_state"
+                    android:textSize="18sp"
                     android:textStyle="italic|bold" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </GridLayout>
-</RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

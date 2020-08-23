@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exam.ExamInformationActivity"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFF388">
+
+        <ImageView
+            android:id="@+id/examInfoBackArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/backarrow"
+            android:src="@drawable/ic_back_24"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/examInfoToolbar"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:subtitle="@string/explanation"
+            app:title="@string/trial_exam"
+            tools:ignore="RtlSymmetry"/>
+
+        <ImageView
+            android:id="@+id/mainFlag"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_exam"
+            android:contentDescription="@string/flag" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/examBschreibung"
+        android:layout_margin="15dp"
+        android:justificationMode="inter_word"
+        android:textColor="@color/colorBlack"/>
+    <Button
+        android:id="@+id/examInfoButton"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/start"
+        android:background="@color/colorBlueDark"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

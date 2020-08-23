@@ -926,7 +926,7 @@ class RawData {
 				"Staatssymbole", 10,
 				"D",
 				"78,0%",
-				true
+				false
 			)
 		)
         list.add(

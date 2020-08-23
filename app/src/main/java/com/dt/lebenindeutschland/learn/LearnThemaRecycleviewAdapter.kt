@@ -77,7 +77,7 @@ class LearnThemaRecycleviewAdapter(private val list: List<Question>) :
                 "drawable",
                 context.packageName
             )
-            @Suppress("DEPRECATION") val res = context.resources.getDrawable(number)
+            val res = context.resources.getDrawable(number, context.theme)
             holder.themaImgQestion.setImageDrawable(res)
         } else {
             holder.themaImgQestion.visibility = View.GONE

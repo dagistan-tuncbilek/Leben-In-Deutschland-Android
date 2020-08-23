@@ -62,10 +62,9 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
         }
         Log.d(TAG, " clicked")
         if (selectedState == State.NOT_SELECTED) {
-            Toast.makeText(applicationContext, "Bitte wahlen Sie ein Thema", Toast.LENGTH_SHORT)
+            Toast.makeText(applicationContext, R.string.select_a_thema, Toast.LENGTH_SHORT)
                 .show()
         } else {
-            Toast.makeText(applicationContext,selectedState.getStateName() + " Gewahlt", Toast.LENGTH_SHORT).show()
             DataBaseHandler(this).updateStateData(selectedState)
             Log.d(TAG, "${selectedState.getStateName()} Selected ")
             startActivity(Intent(this, MainActivity::class.java))
@@ -74,7 +73,7 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onBackPressed() {
         if (selectedState == State.NOT_SELECTED) {
-            Toast.makeText(applicationContext, "Bitte wahlen Sie ein Thema", Toast.LENGTH_SHORT)
+            Toast.makeText(applicationContext, R.string.select_a_thema, Toast.LENGTH_SHORT)
                 .show()
             Log.d(TAG, " backpress suspended")
             return

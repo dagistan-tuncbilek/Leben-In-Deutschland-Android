@@ -1,6 +1,6 @@
 package com.dt.lebenindeutschland.utility
 
-data class Question (
+data class Question(
 	val id: Int,
 	val question: String,
 	val answerA: String,
@@ -12,5 +12,6 @@ data class Question (
 	val trueAnswer: String,
 	val success: String,
 	val hasPhoto: Boolean,
-	var isLearned: Boolean = false
+	var isLearned: Boolean = false,
+	var userAnswer: String? = null
 )

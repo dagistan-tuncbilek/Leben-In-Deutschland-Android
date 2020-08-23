@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.appcompat.widget.Toolbar
 import com.dt.lebenindeutschland.R
 import com.dt.lebenindeutschland.utility.*
 import com.dt.lebenindeutschland.selectedState
@@ -17,10 +18,10 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
     private val db: DataBaseHandler = DataBaseHandler(this)
     private var index: Int = 0
     private var questionChecked: Boolean = false
-    private val colorTrue = Color.rgb(197, 255, 168)
-    private val colorFalse  = Color.rgb(217, 217, 217)
+    private val colorTrue = Color.rgb(7, 252, 3)
+    private val colorFalse  = Color.rgb(255, 54, 54)
     private val colorWhite  = Color.rgb(255, 255, 255)
-    private lateinit var testThemaSubText:TextView
+    private lateinit var testThemaToolbar:Toolbar
     private lateinit var testThemaQuestion: TextView
     private lateinit var testThemaAnswerA: CheckBox
     private lateinit var testThemaAnswerB: CheckBox
@@ -58,14 +59,15 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
                     if (questionList.count() > index+1) {
                         index++
                         setQuestion()
-                    } else Toast.makeText(this, "Dies ist die letzte Frage", Toast.LENGTH_LONG).show()
+                    } else startActivity(Intent(this, TestActivity::class.java))
+                    btnTestNext.text = if (questionList.count() == index+1) getString(R.string.finish) else getString(R.string.next)
                 }
 
                 R.id.btnTestPrevious -> {
                     if (index > 0) {
                         index--
                         setQuestion()
-                    } else Toast.makeText(this, "Dies ist die erste Frage", Toast.LENGTH_LONG).show()
+                    } else Toast.makeText(this, R.string.first_question, Toast.LENGTH_LONG).show()
                 }
 
                 R.id.testThemaAnswerA -> {
@@ -154,8 +156,8 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
 
     @SuppressLint("SetTextI18n", "UseCompatLoadingForDrawables")
     private fun setQuestion() {
-        if (selectedThema == Thema.BUNDESLANDER) testThemaSubText.text = selectedState.getStateName()
-        else testThemaSubText.text = selectedThema.getThemaName()
+        if (selectedThema == Thema.BUNDESLANDER) testThemaToolbar.subtitle = selectedState.getStateName()
+        else testThemaToolbar.subtitle = selectedThema.getThemaName()
         testThemaAnswerA.isChecked = false
         testThemaAnswerB.isChecked = false
         testThemaAnswerC.isChecked = false
@@ -164,12 +166,12 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         testThemaAnswerB.setBackgroundColor(colorWhite)
         testThemaAnswerC.setBackgroundColor(colorWhite)
         testThemaAnswerD.setBackgroundColor(colorWhite)
-        testThemaQuestion.text = "${questionList[index].question}"
+        testThemaQuestion.text = questionList[index].question
         testThemaAnswerA.text = " A. ${questionList[index].answerA}"
         testThemaAnswerB.text = " B. ${questionList[index].answerB}"
         testThemaAnswerC.text = " C. ${questionList[index].answerC}"
         testThemaAnswerD.text = " D. ${questionList[index].answerD}"
-        testThemaSuccessText.text = "Erfolgsprozentsatz in der tatsächlichen Prüfung ist ${questionList[index].success}"
+        testThemaSuccessText.text = "${getString(R.string.success_explanation)} ${questionList[index].success}"
         if (questionList[index].hasPhoto) {
             testImgQestion.visibility = View.VISIBLE
             val imageName = "i${questionList[index].id}"
@@ -178,7 +180,7 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
                 "drawable",
                 packageName
             )
-            @Suppress("DEPRECATION") val res = resources.getDrawable(number)
+            val res = resources.getDrawable(number, this.theme)
             testImgQestion.setImageDrawable(res)
         } else {
             testImgQestion.visibility = View.GONE
@@ -187,8 +189,7 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
     }
     
     private fun initialize() {
-        testThemaSubText = findViewById(R.id.testThemaSubText)
-        testThemaSubText.setOnClickListener(this)
+        testThemaToolbar = findViewById(R.id.testThemaToolbar)
         testThemaQuestion = findViewById(R.id.testThemaQuestion)
         testThemaAnswerA = findViewById(R.id.testThemaAnswerA)
         testThemaAnswerA.setOnClickListener(this)

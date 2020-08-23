@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/resultTextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:theme="@style/CheckBoxTheme"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:id="@+id/resultTextAnswerA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:theme="@style/CheckBoxTheme"
+        android:textColor="@color/colorBlack"
+        android:text="@string/dummyText"/>
+
+    <CheckBox
+        android:id="@+id/resultTextAnswerB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:theme="@style/CheckBoxTheme"
+        android:textColor="@color/colorBlack"
+        android:text="@string/dummyText" />
+
+    <CheckBox
+        android:id="@+id/resultTextAnswerC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:theme="@style/CheckBoxTheme"
+        android:textColor="@color/colorBlack"
+        android:text="@string/dummyText" />
+
+    <CheckBox
+        android:id="@+id/resultTextAnswerD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:theme="@style/CheckBoxTheme"
+        android:textColor="@color/colorBlack"
+        android:text="@string/dummyText" />
+
+    <ImageView
+        android:id="@+id/resultImgQestion"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:contentDescription="@string/logo" />
+</LinearLayout>

@@ -4,12 +4,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_round_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_round_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".test.TestThemaActivity"></activity>
+        <activity android:name=".exam.ResultActivity"></activity>
+        <activity android:name=".exam.ExamActivity" />
+        <activity android:name=".exam.ExamInformationActivity" />
+        <activity android:name=".test.TestThemaActivity" />
         <activity android:name=".test.TestActivity" />
         <activity android:name=".learn.ThemaActivity" />
         <activity android:name=".SelectStateActivity" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,34 +7,46 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/mainToolbar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF388"
-        android:paddingLeft="10dp"
+        android:orientation="horizontal"
+        android:background="#FFF388">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
-        app:subtitle="Bürgeschaft Prüfung"
-        app:title="Leben In Deutschland"></androidx.appcompat.widget.Toolbar>
+        app:subtitle="@string/citizenship_exam"
+        app:title="@string/lid"
+        tools:ignore="RtlSymmetry" />
 
     <ImageView
         android:id="@+id/mainFlag"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
+        android:layout_weight="3"
         android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_flag" />
+        android:src="@drawable/ic_flag"
+        android:contentDescription="@string/flag" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/mainCardViewLearning"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mainToolbar"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
         app:cardCornerRadius="5dp"
         app:cardUseCompatPadding="true">
 
@@ -46,25 +58,28 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_learn" />
+                android:src="@drawable/ic_learn"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/learn_logo" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_centerVertical="true"
-                android:text="Learnen Fragen"
-                android:textSize="18dp"
-                android:textStyle="italic|bold" />
+                android:layout_marginStart="150dp"
+                android:text="@string/learn_questions"
+                android:textSize="18sp"
+                android:textStyle="italic|bold"
+                android:layout_centerVertical="true"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/mainCardViewTest"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mainCardViewLearning"
-        android:layout_margin="5dp"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
         app:cardCornerRadius="5dp"
         app:cardUseCompatPadding="true">
 
@@ -76,15 +91,17 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_test" />
+                android:src="@drawable/ic_test"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/test_logo" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
+                android:layout_marginStart="150dp"
                 android:layout_centerVertical="true"
-                android:text="Testen sich"
-                android:textSize="18dp"
+                android:text="@string/test_yourself"
+                android:textSize="18sp"
                 android:textStyle="italic|bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -92,9 +109,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/mainCardViewExam"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mainCardViewTest"
-        android:layout_margin="5dp"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
         app:cardCornerRadius="5dp"
         app:cardUseCompatPadding="true">
 
@@ -106,15 +124,17 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_exam" />
+                android:src="@drawable/ic_exam"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/exam_logo" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
+                android:layout_marginStart="150dp"
                 android:layout_centerVertical="true"
-                android:text="Probeprüfung"
-                android:textSize="18dp"
+                android:text="@string/trial_exam"
+                android:textSize="18sp"
                 android:textStyle="italic|bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -122,9 +142,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/mainCardViewSelectState"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mainCardViewExam"
-        android:layout_margin="5dp"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
         app:cardCornerRadius="5dp"
         app:cardUseCompatPadding="true">
 
@@ -136,17 +157,19 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_bundeslander" />
+                android:src="@drawable/ic_bundeslander"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/select_state" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
+                android:layout_marginStart="150dp"
                 android:layout_centerVertical="true"
-                android:text="Wahlen Sie ein Bundesländer"
-                android:textSize="18dp"
+                android:text="@string/select_a_state"
+                android:textSize="18sp"
                 android:textStyle="italic|bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
-</RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

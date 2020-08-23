@@ -82,6 +82,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
             val ordinal = cursor.getInt(cursor.getColumnIndex(COL_SELECTEDLAND))
             selectedState = State.values()[ordinal]
         }
+        db.close()
     }
 
     fun updateStateData(state : State){
@@ -106,6 +107,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
             val isLearned: Boolean = cursor.getInt(cursor.getColumnIndex(COL_ISLEARNED)) > 0
             results.add(UserTestResult(id, themaid, isLearned))
         }
+        db.close()
         return results
     }
 
@@ -132,6 +134,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
 //                isLearned = cursor.getInt(cursor.getColumnIndex(COL_ISLEARNED)) > 0)
 //            )
 //        }
+//    db.close()
 //        return results
 //    }
 
@@ -161,6 +164,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
                 isLearned = cursor.getInt(cursor.getColumnIndex(COL_ISLEARNED)) > 0)
             )
         }
+        db.close()
         return results
     }
 
@@ -187,6 +191,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
                     isLearned = cursor.getInt(cursor.getColumnIndex(COL_ISLEARNED)) > 0)
             )
         }
+        db.close()
         return results
     }
 

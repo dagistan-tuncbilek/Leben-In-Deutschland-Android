@@ -7,61 +7,39 @@
     tools:context=".learn.ThemaActivity"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF388"
-        app:contentInsetEnd="5dp"
-        app:contentInsetStart="5dp">
+        android:orientation="horizontal"
+        android:background="#FFF388">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/themaBackArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/backarrow"
+            android:src="@drawable/ic_back_24"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/themaToolbar"
+            android:layout_width="0dp"
+            android:layout_weight="7"
             android:layout_height="wrap_content"
-            android:padding="0dp">
+            android:paddingStart="10dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:title="@string/title_lernen"
+            app:subtitle="@string/select_a_thema"
+            tools:ignore="RtlSymmetry"/>
 
-            <ImageView
-                android:id="@+id/themaBackArrow"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:contentDescription="@string/backarrow"
-                android:src="@drawable/ic_back_24" />
-
-            <TextView
-                android:id="@+id/themaToolText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/themaBackArrow"
-                android:text="@string/title_lernen"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                tools:ignore="RelativeOverlap"></TextView>
-
-            <TextView
-                android:id="@+id/themaToolSubText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/themaBackArrow"
-                android:textColor="@color/colorBlack"
-                android:textSize="15sp"
-                android:textStyle="italic"
-                tools:ignore="RelativeOverlap"></TextView>
-
-            <ImageView
-                android:id="@+id/themaImg"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="@string/learnlogo"
-                android:src="@drawable/ic_learn"/>
-        </RelativeLayout>
-
-    </androidx.appcompat.widget.Toolbar>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_test"
+            android:contentDescription="@string/test_logo" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

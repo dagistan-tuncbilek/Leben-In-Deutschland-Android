@@ -12,9 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Question"
+        android:text="@string/dummyText"
         android:textColor="@color/colorBlack"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/themaTextAnswerA"
@@ -22,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/colorBlack"
-        android:text="textAnswerA" />
+        android:text="@string/dummyText"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/themaTextAnswerB"
@@ -30,7 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/colorBlack"
-        android:text="textAnswerB" />
+        android:text="@string/dummyText"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/themaTextAnswerC"
@@ -38,7 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/colorBlack"
-        android:text="textAnswerC" />
+        android:text="@string/dummyText"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/themaTextAnswerD"
@@ -46,12 +50,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/colorBlack"
-        android:text="textAnswerD" />
+        android:text="@string/dummyText"
+        android:textSize="16sp"/>
 
     <ImageView
         android:id="@+id/themaImgQestion"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="20dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:contentDescription="@string/logo" />
 </LinearLayout>
