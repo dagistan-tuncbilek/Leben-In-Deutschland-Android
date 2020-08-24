@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mieszkać w Niemczech</string>
+    <string name="title_lernen">Pytania i odpowiedzi</string>
+    <string name="test_yourself">Sprawdź się</string>
+    <string name="trial_exam">Egzamin</string>
+    <string name="bundeslander">Kraje związkowe</string>
+    <string name="select_a_state">Wybierz stan</string>
+    <string name="select_a_thema">Wybierz temat</string>
+    <string name="citizenship_exam">Egzamin na obywatelstwo</string>
+    <string name="next">Kolejny</string>
+    <string name="last">Poprzedni</string>
+    <string name="finish">Koniec</string>
+    <string name="first_question">To jest pierwsze pytanie</string>
+    <string name="last_question">To jest ostatnie pytanie</string>
+    <string name="start">Zaczynać</string>
+    <string name="finish_exam">Zakończ egzamin</string>
+    <string name="show_result">Pokaż wyniki</string>
+    <string name="show_questions">Pokaż pytania</string>
+    <string name="true_answer">Poprawna</string>
+    <string name="false_answer">Zła</string>
+    <string name="empty_answer">Pusta</string>
+    <string name="change_language">Zmień język</string>
+    <string name="language_polish">Polskie</string>
+    <string name="language_german">Niemiecki</string>
+    <string name="language_english">Język Angielski</string>
+    <string name="language_russia">Rosyjski</string>
+    <string name="language_turkisch">Turecki</string>
+    <string name="language_arabic">Arabski</string>
+    <string name="sackd">Spróbuj ponownie!</string>
+    <string name="end_the_exam">Chcesz skończyć egzamin?</string>
+    <string name="success_explanation">Procent sukcesu w rzeczywistym egzaminie wynosi</string>
+    <string name="explanation">Wyjaśnienia</string>
+    <string name="explanation1">Zebraliśmy kilka informacji i wskazówek, aby ułatwić Ci ten test.</string>
+    <string name="explanation2">Test składa się z 33 pytań. Masz 60 minut na udzielenie odpowiedzi na te pytania.</string>
+    <string name="explanation3">Na każde pytanie są cztery odpowiedzi. Tylko jedna z tych odpowiedzi jest poprawna, więc zawsze wybieraj jedną. Jeśli odpowiesz poprawnie na przynajmniej 15 pytań, zdasz egzamin. Jeśli odpowiesz poprawnie na przynajmniej 17 pytań, nie musisz później przystępować do kolejnego testu na obywatelstwo.</string>
+    <string name="congratulations">Gratulacje</string>
+    <string name="results">Wyniki</string>
+    <string name="general_questions" translatable="false">Pytanie federalne</string>
+    <string name="state_questions">Pytanie o stan</string>
+    <string name="positive">Tak</string>
+    <string name="negative">Nie</string>
+</resources>

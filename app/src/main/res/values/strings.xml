@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name" translatable="false">Leben In Deutschland</string>
-    <string name="bundeslander" translatable="false">Bundesländer</string>
+    <string name="app_name">Leben In Deutschland</string>
+    <string name="bundeslander">Bundesländer</string>
     <string name="baden" translatable="false">Baden Württemberg</string>
     <string name="bayern" translatable="false">Bayern</string>
     <string name="berlin" translatable="false">Berlin</string>
@@ -18,49 +18,51 @@
     <string name="schleswig" translatable="false">Schleswig Holstein</string>
     <string name="thuringen" translatable="false">Thüringen</string>
     <string name="title_activity_main2" translatable="false">MainActivity</string>
-    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
-    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
-    <string name="nav_header_title" translatable="false">Android Studio</string>
-    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
-    <string name="nav_header_desc" translatable="false">Navigation header</string>
-    <string name="action_settings" translatable="false">Settings</string>
     <string name="backarrow" translatable="false">backArrow</string>
-    <string name="title_lernen" translatable="false">Fragen und Antworten</string>
+    <string name="title_lernen">Fragen und Antworten</string>
     <string name="learn_logo" translatable="false">learnLogo</string>
-    <string name="examBschreibung" translatable="false">\tWir haben einige Informationen und Tipps zusammengestellt, damit Ihnen dieser Test leichter fällt.\n\n\tDer Test besteht aus <b><font color='red'>33 Fragen.</font></b> Sie haben <b><font color='red'>60 Minuten Zeit</font></b>, um diese Fragen zu beantworten.\n\n\tWenn Sie mindestens <b><font color='red'>15 Fragen</font></b> richtig beantworten, haben Sie den Test bestanden. Wenn Sie mindestens 17 Fragen richtig beantworten, brauchen Sie später <b>keinen Einbürgerungstest</b> mehr zu machen. \n\n\tZu jeder Frage gibt es vier Antworten. Nur eine dieser Antworten ist richtig, machen Sie deshalb immer nur ein Kreuz.</string>
-    <string name="citizenship_exam" translatable="false">Bürgeschaft Prüfung</string>
-    <string name="lid" translatable="false">Leben In Deutschland</string>
+    <string name="explanation1">Wir haben einige Informationen und Tipps zusammengestellt, damit Ihnen dieser Test leichter fällt.</string>
+    <string name="explanation2">Der Test besteht aus <b><font color='red'>33 Fragen.</font></b> Sie haben <b><font color='red'>60 Minuten Zeit</font></b>, um diese Fragen zu beantworten.</string>
+    <string name="explanation3">Wenn Sie mindestens <b><font color='red'>15 Fragen</font></b> richtig beantworten, haben Sie den Test bestanden. Wenn Sie mindestens 17 Fragen richtig beantworten, brauchen Sie später <b>keinen Einbürgerungstest</b> mehr zu machen.</string>
+    <string name="citizenship_exam">Bürgeschaft Prüfung</string>
     <string name="flag" translatable="false">flag</string>
-    <string name="learn_questions" translatable="false">Fragen</string>
     <string name="test_logo" translatable="false">testLogo</string>
-    <string name="test_yourself" translatable="false">Testen Sie sich</string>
-    <string name="trial_exam" translatable="false">Probeprüfung</string>
+    <string name="test_yourself">Testen Sie sich</string>
+    <string name="trial_exam">Probeprüfung</string>
     <string name="exam_logo" translatable="false">examlogo</string>
     <string name="select_state" translatable="false">Select State</string>
-    <string name="select_a_state" translatable="false">Wählen Sie ein Bundesland</string>
-    <string name="next" translatable="false">Nächster</string>
-    <string name="last" translatable="false">Bisherige</string>
-    <string name="congratulations" translatable="false">Herzliche Glückwünsche</string>
-    <string name="show_result" translatable="false">Ergebnisse Anzeigen</string>
+    <string name="select_a_state">Wählen Sie ein Bundesland</string>
+    <string name="next">Nächster</string>
+    <string name="last">Bisherige</string>
+    <string name="congratulations">Herzliche Glückwünsche</string>
+    <string name="show_result">Ergebnisse Anzeigen</string>
     <string name="show_questions">Fragen Anzeigen</string>
     <string name="dummyText" translatable="false">dummyText</string>
     <string name="question_picture" translatable="false">Question Picture</string>
-    <string name="finish_exam" translatable="false">Beende die Prüfung</string>
-    <string name="explanation" translatable="false">Beschreibungen</string>
-    <string name="start" translatable="false">Starten</string>
-    <string name="select_a_thema" translatable="false">Wahlen Sie bitte ein Thema</string>
-    <string name="results" translatable="false">Ergebnisse</string>
-    <string name="general_questions" translatable="false">Bundeseinheitlichen\nFragen</string>
-    <string name="state_questions" translatable="false">Bundesland\nFragen</string>
-    <string name="true_answer" translatable="false">Richtige Antwort</string>
-    <string name="false_answer" translatable="false">Falsche Antwort</string>
-    <string name="empty_answer" translatable="false">Leere Antwort</string>
+    <string name="finish_exam">Beende die Prüfung</string>
+    <string name="explanation">Beschreibungen</string>
+    <string name="start">Starten</string>
+    <string name="select_a_thema">Wahlen Sie bitte ein Thema</string>
+    <string name="results">Ergebnisse</string>
+    <string name="general_questions">Bundeseinheitlichen Frage</string>
+    <string name="state_questions">Bundesland Frage</string>
+    <string name="true_answer">Richtige Antwort</string>
+    <string name="false_answer">Falsche Antwort</string>
+    <string name="empty_answer">Leere Antwort</string>
     <string name="logo" translatable="false">logo</string>
-    <string name="success_explanation" translatable="false">Erfolg Prozentsatz in der tatsächlichen Prüfung ist</string>
-    <string name="end_the_exam" translatable="false">Möchten Sie die Prüfung beenden?</string>
-    <string name="first_question" translatable="false">Dies ist die erste Frage</string>
-    <string name="last_question" translatable="false">Dies ist die letzte Frage</string>
-    <string name="sackd" translatable="false">Versuch es noch einmal!</string>
-    <string name="question" translatable="false">Fragen</string>
-    <string name="finish" translatable="false">Fertig</string>
+    <string name="success_explanation">Erfolg Prozentsatz in der tatsächlichen Prüfung ist</string>
+    <string name="end_the_exam">Möchten Sie die Prüfung beenden?</string>
+    <string name="first_question">Dies ist die erste Frage</string>
+    <string name="last_question">Dies ist die letzte Frage</string>
+    <string name="sackd">Versuch es noch einmal!</string>
+    <string name="finish">Fertig</string>
+    <string name="change_language">Ändere die Sprache</string>
+    <string name="language_polish">Polnisch</string>
+    <string name="language_german">Deutsch</string>
+    <string name="language_english">Englisch</string>
+    <string name="language_russia">Russisch</string>
+    <string name="language_turkisch">Türkisch</string>
+    <string name="language_arabic">Arabisch</string>
+    <string name="positive">Ja</string>
+    <string name="negative">Nein</string>
 </resources>

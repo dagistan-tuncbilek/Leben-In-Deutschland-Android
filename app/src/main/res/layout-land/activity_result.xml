@@ -82,7 +82,9 @@
                         android:text="@string/general_questions"
                         android:textColor="@color/colorBlack"
                         android:textStyle="bold"
-                        android:layout_marginBottom="10dp"/>
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:paddingEnd="30dp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -95,7 +97,7 @@
                             android:layout_weight="3"
                             android:gravity="center_vertical"
                             android:text="@string/true_answer"
-                            android:textStyle="bold" />
+                            android:textColor="@color/colorBlack"/>
 
                         <TextView
                             android:id="@+id/textResultRichtihe300"
@@ -103,7 +105,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RtlCompat" />
                     </LinearLayout>
 
@@ -119,7 +121,7 @@
                             android:layout_weight="3"
                             android:gravity="center_vertical"
                             android:text="@string/false_answer"
-                            android:textStyle="bold" />
+                            android:textColor="@color/colorBlack" />
 
                         <TextView
                             android:id="@+id/textResultFalche300"
@@ -127,7 +129,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RtlCompat" />
                     </LinearLayout>
 
@@ -143,7 +145,7 @@
                             android:layout_weight="3"
                             android:gravity="center_vertical"
                             android:text="@string/empty_answer"
-                            android:textStyle="bold" />
+                            android:textColor="@color/colorBlack" />
 
                         <TextView
                             android:id="@+id/textResultEmpty300"
@@ -151,7 +153,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RtlCompat" />
 
                     </LinearLayout>
@@ -194,7 +196,9 @@
                             android:text="@string/state_questions"
                             android:textColor="@color/colorBlack"
                             android:textStyle="bold"
-                            android:layout_marginBottom="10dp"/>
+                            android:layout_marginBottom="10dp"
+                            android:textAlignment="center"
+                            android:paddingEnd="40dp"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -207,7 +211,7 @@
                                 android:layout_weight="3"
                                 android:gravity="center_vertical"
                                 android:text="@string/true_answer"
-                                android:textStyle="bold" />
+                                android:textColor="@color/colorBlack" />
 
                             <TextView
                                 android:id="@+id/textResultRichtigeState"
@@ -215,7 +219,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
                                 tools:ignore="RtlCompat" />
                         </LinearLayout>
 
@@ -231,7 +235,7 @@
                                 android:layout_weight="3"
                                 android:gravity="center_vertical"
                                 android:text="@string/false_answer"
-                                android:textStyle="bold" />
+                                android:textColor="@color/colorBlack" />
 
                             <TextView
                                 android:id="@+id/textResultFalcheState"
@@ -239,7 +243,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
                                 tools:ignore="RtlCompat" />
                         </LinearLayout>
 
@@ -254,7 +258,7 @@
                                 android:layout_weight="3"
                                 android:gravity="center_vertical"
                                 android:text="@string/empty_answer"
-                                android:textStyle="bold" />
+                                android:textColor="@color/colorBlack" />
 
                             <TextView
                                 android:id="@+id/textResultEmptyState"
@@ -262,7 +266,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
                                 tools:ignore="RtlCompat" />
                         </LinearLayout>
 

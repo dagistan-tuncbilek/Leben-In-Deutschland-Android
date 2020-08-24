@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/ic_round_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".exam.ResultActivity"></activity>
+        <activity android:name=".LanguageActivity"></activity>
+        <activity android:name=".exam.ResultActivity" />
         <activity android:name=".exam.ExamActivity" />
         <activity android:name=".exam.ExamInformationActivity" />
         <activity android:name=".test.TestThemaActivity" />

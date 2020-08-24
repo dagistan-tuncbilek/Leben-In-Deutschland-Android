@@ -1,197 +1,215 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".test.TestThemaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#FFF388">
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/mainToolbar"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF388"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/mainToolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:paddingStart="10dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp"
+                app:subtitle="@string/citizenship_exam"
+                app:title="@string/app_name"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/mainFlag"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:contentDescription="@string/flag"
+                android:src="@drawable/ic_flag" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardViewLearning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="10"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/learn_logo"
+                        android:src="@drawable/ic_learn" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="145dp"
+                        android:text="@string/title_lernen"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardViewTest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="10"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/test_logo"
+                        android:src="@drawable/ic_test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="145dp"
+                        android:text="@string/test_yourself"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardViewExam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="10"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/test_logo"
+                        android:src="@drawable/ic_exam" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="145dp"
+                        android:text="@string/trial_exam"
+                        android:textStyle="italic|bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardViewSelectState"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="10"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/select_state"
+                        android:src="@drawable/ic_bundeslander" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="145dp"
+                        android:text="@string/select_a_state"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mainCardVievLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
             android:layout_weight="8"
-            android:layout_height="wrap_content"
-            android:paddingStart="10dp"
-            app:contentInsetEnd="0dp"
-            app:contentInsetStart="0dp"
-            app:subtitle="@string/citizenship_exam"
-            app:title="@string/lid"
-            tools:ignore="RtlSymmetry" />
-
-        <ImageView
-            android:id="@+id/mainFlag"
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_flag"
-            android:contentDescription="@string/flag" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/background">
-
-    <GridLayout
-        android:id="@+id/mainGridLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:alignmentMode="alignBounds"
-        android:columnCount="2"
-        android:rowOrderPreserved="false"
-        android:useDefaultMargins="true">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/mainCardViewLearning"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_gravity="center_vertical"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="5dp"
             app:cardUseCompatPadding="true">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#DAE1DF"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_learn"
-                    android:contentDescription="@string/learn_logo" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/lang_icon"
+                    android:layout_marginStart="10dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="145dp"
-                    android:text="@string/learn_questions"
-                    android:textSize="18sp"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/change_language"
                     android:textStyle="italic|bold" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/mainCardViewTest"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="center_vertical"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_test"
-                    android:contentDescription="@string/test_logo" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="145dp"
-                    android:text="@string/test_yourself"
-                    android:textSize="18sp"
-                    android:textStyle="italic|bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </GridLayout>
-
-    <GridLayout
-        android:id="@+id/mainGridLayout2"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:columnCount="2"
-        android:rowOrderPreserved="false"
-        android:useDefaultMargins="true">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/mainCardViewExam"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            android:layout_gravity="center_vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_exam"
-                    android:contentDescription="@string/test_logo" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="145dp"
-                    android:text="@string/trial_exam"
-                    android:textSize="18sp"
-                    android:textStyle="italic|bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/mainCardViewSelectState"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="center_vertical"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_bundeslander"
-                    android:contentDescription="@string/select_state" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="145dp"
-                    android:text="@string/select_a_state"
-                    android:textSize="18sp"
-                    android:textStyle="italic|bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </GridLayout>
 
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

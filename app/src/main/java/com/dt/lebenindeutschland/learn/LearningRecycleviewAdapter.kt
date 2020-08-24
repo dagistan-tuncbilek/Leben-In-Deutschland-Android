@@ -39,7 +39,7 @@ class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, i: Int) {
         holder.themaNameLearnTxt.text = list[i].themaName
-        holder.themaCountLearnTxt.text = "${list[i].max} ${context.getString(R.string.question)}"
+        holder.themaCountLearnTxt.text = "${list[i].max}"
         if (i % 2 == 0) {
             holder.parent.setCardBackgroundColor(Color.rgb(255, 255, 255))
         } else {

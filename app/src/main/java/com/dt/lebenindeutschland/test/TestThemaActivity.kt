@@ -45,6 +45,7 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         val remainingQuestionList: List<Question> = getQuestionList().filter { !it.isLearned }
         questionList = if (remainingQuestionList.count()>0) remainingQuestionList as ArrayList<Question>
                 else getQuestionList()
+        questionList.shuffle()
         setQuestion()
     }
 

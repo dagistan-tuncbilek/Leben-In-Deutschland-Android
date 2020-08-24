@@ -123,22 +123,22 @@
 
             <Button
                 android:id="@+id/btnExamPrevious"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_alignParentStart="true"
                 android:background="@drawable/mybutton"
-                android:text="@string/next"
+                android:text="@string/last"
                 android:textColor="@color/colorWhite"
                 android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/btnExamNext"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/mybutton"
-                android:text="@string/last"
+                android:text="@string/next"
                 android:textColor="@color/colorWhite"
                 android:textAllCaps="false"
                 tools:ignore="RelativeOverlap" />
@@ -154,7 +154,8 @@
             android:backgroundTint="@color/colorGreenDark"
             android:text="@string/finish_exam"
             android:textColor="#ffffff"
-            android:textSize="12sp"/>
+            android:textSize="12sp"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 </ScrollView>

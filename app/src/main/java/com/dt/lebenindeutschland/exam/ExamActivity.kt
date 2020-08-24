@@ -58,14 +58,14 @@ class ExamActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnExamFinish -> {
                 val dialog = AlertDialog.Builder(this)
                     .setTitle(getString(R.string.end_the_exam))
-                    .setPositiveButton("Ja"
+                    .setPositiveButton(getString(R.string.positive)
                     ) { _: DialogInterface, _: Int ->
                         run {
                             testResult = ArrayList(questionList)
                             startActivity(Intent(this, ResultActivity::class.java))
                         }
                     }
-                    .setNegativeButton("Nein"
+                    .setNegativeButton(getString(R.string.negative)
                     ){ _: DialogInterface, _: Int -> }
                     .create()
                 dialog.setOnShowListener {

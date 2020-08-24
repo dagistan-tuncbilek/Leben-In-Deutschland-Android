@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Live in Germany</string>
+    <string name="title_lernen">Questions and Answers</string>
+    <string name="test_yourself" translatable="false">Test Yourself</string>
+    <string name="trial_exam" translatable="false">Exam</string>
+    <string name="bundeslander">Federal States</string>
+    <string name="select_a_state">Choose a State</string>
+    <string name="select_a_thema">Choose a topic</string>
+    <string name="citizenship_exam">Citizenship Exam</string>
+    <string name="next">Next</string>
+    <string name="last">Previous</string>
+    <string name="finish">Finish</string>
+    <string name="first_question">This is the first question</string>
+    <string name="last_question">That is the last question</string>
+    <string name="start">Start</string>
+    <string name="finish_exam">Finish the Exam</string>
+    <string name="show_result">View results</string>
+    <string name="show_questions">Show questions</string>
+    <string name="true_answer">Correct answer</string>
+    <string name="false_answer">Wrong answer</string>
+    <string name="empty_answer">Empty answer</string>
+    <string name="change_language">Change the language</string>
+    <string name="language_polish">Polish</string>
+    <string name="language_german">German</string>
+    <string name="language_english">English</string>
+    <string name="language_russia">Russian</string>
+    <string name="language_turkisch">Turkish</string>
+    <string name="language_arabic">Arabic</string>
+    <string name="sackd">Try again!</string>
+    <string name="end_the_exam" translatable="false">Would you like to finish the exam?</string>
+    <string name="success_explanation" translatable="false">Success percentage in the actual exam is</string>
+    <string name="explanation">Explanations</string>
+    <string name="explanation1" translatable="false">We have put together some information and tips to make this test easier for you.</string>
+    <string name="explanation2">The test consists of 33 questions. You have 60 minutes to answer these questions.</string>
+    <string name="explanation3">If you answer at least 15 questions correctly, you pass the exam. If you answer at least 17 questions correctly, you don\'t need to take another citizenship test later.</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="results">Results</string>
+    <string name="general_questions" translatable="false">Federal question</string>
+    <string name="state_questions">State question</string>
+    <string name="positive">Yes</string>
+    <string name="negative">No</string>
+</resources>

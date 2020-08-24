@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تعيش في ألمانيا</string>
+    <string name="title_lernen">أسئلة وأجوبة</string>
+    <string name="test_yourself">اختبر نفسك</string>
+    <string name="trial_exam">الامتحان</string>
+    <string name="bundeslander">الولايات الاتحادية</string>
+    <string name="select_a_state">اختر ولاية</string>
+    <string name="select_a_thema">اختر موضوعا</string>
+    <string name="citizenship_exam">امتحان المواطنة</string>
+    <string name="next">التالى</string>
+    <string name="last">السابق</string>
+    <string name="finish">إنهاء</string>
+    <string name="first_question">هذا هو السؤال الأول</string>
+    <string name="last_question">هذا هو السؤال الأخير</string>
+    <string name="start">ابدأ</string>
+    <string name="finish_exam">أنهِ الاختبار</string>
+    <string name="show_result">عرض النتائج</string>
+    <string name="show_questions">عرض الأسئلة</string>
+    <string name="true_answer">اجابة صحيحة</string>
+    <string name="false_answer">إجابة خاطئة</string>
+    <string name="empty_answer">إجابة فارغة</string>
+    <string name="change_language">تغيير اللغة</string>
+    <string name="language_polish">تلميع</string>
+    <string name="language_german">ألماني</string>
+    <string name="language_english">الإنجليزية</string>
+    <string name="language_russia">الروسية</string>
+    <string name="language_turkisch">اللغة التركية</string>
+    <string name="language_arabic">عربى</string>
+    <string name="sackd">حاول مجددا!</string>
+    <string name="end_the_exam" translatable="false">هل ترغب في إنهاء الامتحان؟</string>
+    <string name="success_explanation">نسبة النجاح في الامتحان الفعلي هي</string>
+    <string name="explanation">تفسيرات</string>
+    <string name="explanation1">لقد قمنا بتجميع بعض المعلومات والنصائح لجعل هذا الاختبار أسهل بالنسبة لك.</string>
+    <string name="explanation2">يتكون الاختبار من 33 سؤالا. لديك 60 دقيقة للإجابة على هذه الأسئلة.</string>
+    <string name="explanation3">إذا أجبت على الأقل 15 سؤالاً بشكل صحيح ، فإنك تنجح في الاختبار. إذا أجبت على الأقل 17 سؤالاً بشكل صحيح ، فلن تحتاج إلى إجراء اختبار جنسية آخر لاحقًا.</string>
+    <string name="congratulations">تهانينا</string>
+    <string name="results">النتائج</string>
+    <string name="general_questions">سؤال فيدرالي</string>
+    <string name="state_questions">سؤال الدولة</string>
+    <string name="positive">أجل</string>
+    <string name="negative">لا</string>
+</resources>

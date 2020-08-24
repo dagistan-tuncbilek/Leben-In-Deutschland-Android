@@ -7,13 +7,18 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
+import com.dt.lebenindeutschland.LanguageActivity
 import com.dt.lebenindeutschland.selectedState
 
 
 const val DATABASE_NAME = "LID_DB"
-const val TABLE_SELECTEDLAND = "SELECTEDLAND"
-const val COL_SELECTEDLAND = "LAND"
-const val COL_ID_SELECTEDLAND = "ID"
+
+// TABLE_UTILITY, first id value shows the selected state enum with ordinals, second id value shows the language with ordinals.
+const val TABLE_UTILITY = "UTILITY"
+const val COL_VALUE = "VALUE"
+const val COL_ID_UTIL = "ID"
+const val STATE_ID = 1
+const val LANGUAGE_ID = 2
 
 const val TABLE_QUESTION_DATA = "LID_TABLE"
 const val COL_ID = "ID"
@@ -35,7 +40,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
 
     override fun onCreate(db: SQLiteDatabase?) {
 
-        val createLandTable = "CREATE TABLE $TABLE_SELECTEDLAND ($COL_ID_SELECTEDLAND INTEGER, $COL_SELECTEDLAND INTEGER)"
+        val createLandTable = "CREATE TABLE $TABLE_UTILITY ($COL_ID_UTIL INTEGER, $COL_VALUE INTEGER)"
         val createQuestionTable = "CREATE TABLE $TABLE_QUESTION_DATA (${COL_ID} INTEGER PRIMARY KEY, $COL_QUESTION TEXT," +
                 "$COL_ANSWER_A TEXT, $COL_ANSWER_B TEXT, $COL_ANSWER_C TEXT, $COL_ANSWER_D TEXT, " +
                 "$COL_THEMA TEXT, $COL_THEMA_ID INTEGER, $COL_TRUE_ANSWER TEXT, $COL_SUCCESS TEXT, " +
@@ -63,34 +68,41 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
             Log.d(TAG, "${q.id}. data inserted")
         }
 
-        val contentValue = ContentValues()
-        contentValue.put(COL_ID_SELECTEDLAND, 1)
-        contentValue.put(COL_SELECTEDLAND, State.NOT_SELECTED.ordinal)
-        db?.insert(TABLE_SELECTEDLAND, null, contentValue)
+        val contentState = ContentValues()
+        contentState.put(COL_ID_UTIL, STATE_ID)
+        contentState.put(COL_VALUE, State.NOT_SELECTED.ordinal)
+        val contentLanguage = ContentValues()
+        contentLanguage.put(COL_ID_UTIL, LANGUAGE_ID)
+        contentLanguage.put(COL_VALUE, Language.NOT_SELECTED.ordinal)
+        db?.insert(TABLE_UTILITY, null, contentState)
+        db?.insert(TABLE_UTILITY, null, contentLanguage)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
     }
 
     @SuppressLint("Recycle")
-    fun setUserStateFromDatabase () {
+    fun setUserSettingsFromDatabase () : Language{
         val db = this.readableDatabase
-        val columns = arrayOf(COL_ID_SELECTEDLAND, COL_SELECTEDLAND)
-        val cursor: Cursor = db.query(TABLE_SELECTEDLAND, columns, null, null, null, null, null)
+        val columns = arrayOf(COL_ID_UTIL, COL_VALUE)
+        val cursor: Cursor = db.query(TABLE_UTILITY, columns, null, null, null, null, null)
+        var language:Language = Language.NOT_SELECTED
         while (cursor.moveToNext()) {
-            cursor.getInt(cursor.getColumnIndex(COL_ID_SELECTEDLAND))
-            val ordinal = cursor.getInt(cursor.getColumnIndex(COL_SELECTEDLAND))
-            selectedState = State.values()[ordinal]
+            val id = cursor.getInt(cursor.getColumnIndex(COL_ID_UTIL))
+            val ordinal = cursor.getInt(cursor.getColumnIndex(COL_VALUE))
+            if (id == 1) selectedState = State.values()[ordinal]
+            if (id == 2) language = Language.values()[ordinal]
         }
         db.close()
+        return language
     }
 
-    fun updateStateData(state : State){
+    fun updateUtilityData(id: Int, ordinal: Int){
         val db = writableDatabase
         val cv = ContentValues()
-        cv.put(COL_ID_SELECTEDLAND, 1)
-        cv.put(COL_SELECTEDLAND, state.ordinal)
-        db.update(TABLE_SELECTEDLAND, cv, "$COL_ID_SELECTEDLAND=1", null)
+        cv.put(COL_ID_UTIL, id)
+        cv.put(COL_VALUE, ordinal)
+        db.update(TABLE_UTILITY, cv, "$COL_ID_UTIL=$id", null)
         Log.d(TAG, "Selected land updated -> ${selectedState.getStateName()}")
         db.close()
     }

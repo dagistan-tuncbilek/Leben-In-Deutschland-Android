@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Жить в Германии</string>
+    <string name="title_lernen">Вопросы и ответы</string>
+    <string name="test_yourself">Проверь себя</string>
+    <string name="trial_exam">Кзамен</string>
+    <string name="bundeslander">Федеральные земли</string>
+    <string name="select_a_state">Выберите штат</string>
+    <string name="select_a_thema">Выберите тему</string>
+    <string name="citizenship_exam">Экзамен на гражданство</string>
+    <string name="next">Cледующий</string>
+    <string name="last">Предыдущий</string>
+    <string name="finish">финиш</string>
+    <string name="first_question">Это первый вопрос</string>
+    <string name="last_question">Это последний вопрос</string>
+    <string name="start">Hачать</string>
+    <string name="finish_exam">Сдать экзамен</string>
+    <string name="show_result">Посмотреть Результаты</string>
+    <string name="show_questions">Показать вопросы</string>
+    <string name="true_answer">"Правильный "</string>
+    <string name="false_answer">Неправильный</string>
+    <string name="empty_answer">Пустой</string>
+    <string name="change_language">Сменить язык</string>
+    <string name="language_polish">Польский</string>
+    <string name="language_german">Немецкий</string>
+    <string name="language_english">Aнглийский</string>
+    <string name="language_russia">Pусский</string>
+    <string name="language_turkisch">Tурецкий</string>
+    <string name="language_arabic">Aрабский</string>
+    <string name="sackd">Попробуй еще раз!</string>
+    <string name="end_the_exam">Хотите сдать экзамен?</string>
+    <string name="success_explanation" translatable="false">Процент успешной сдачи экзамена составляет</string>
+    <string name="explanation">Пояснения</string>
+    <string name="explanation1">Мы собрали информацию и советы, чтобы облегчить вам этот тест.</string>
+    <string name="explanation2">Тест состоит из 33 вопросов. У вас есть 60 минут, чтобы ответить на эти вопросы.</string>
+    <string name="explanation3">Если вы ответите правильно хотя бы на 15 вопросов, вы сдадите экзамен. Если вы правильно ответите хотя бы на 17 вопросов, вам не нужно будет позже сдавать еще один тест на гражданство.</string>
+    <string name="congratulations">Сердечные поздравления</string>
+    <string name="results" translatable="false">Полученные результаты</string>
+    <string name="general_questions">Федеральный вопрос</string>
+    <string name="state_questions">Государственный вопрос</string>
+    <string name="positive">Да</string>
+    <string name="negative">Нет</string>
+</resources>

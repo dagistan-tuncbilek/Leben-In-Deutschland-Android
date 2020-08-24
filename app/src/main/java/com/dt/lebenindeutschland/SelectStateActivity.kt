@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.dt.lebenindeutschland.utility.DataBaseHandler
+import com.dt.lebenindeutschland.utility.STATE_ID
 import com.dt.lebenindeutschland.utility.State
 
 var selectedState: State = State.NOT_SELECTED
@@ -65,7 +66,7 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(applicationContext, R.string.select_a_thema, Toast.LENGTH_SHORT)
                 .show()
         } else {
-            DataBaseHandler(this).updateStateData(selectedState)
+            DataBaseHandler(this).updateUtilityData(STATE_ID, selectedState.ordinal)
             Log.d(TAG, "${selectedState.getStateName()} Selected ")
             startActivity(Intent(this, MainActivity::class.java))
         }

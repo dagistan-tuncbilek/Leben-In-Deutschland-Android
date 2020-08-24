@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Almanya\'da Yaşam</string>
+    <string name="title_lernen">Sorular ve Cevaplar</string>
+    <string name="test_yourself" translatable="false">Alıştırmalar</string>
+    <string name="trial_exam">Deneme Sınavı</string>
+    <string name="bundeslander">Eyaletler</string>
+    <string name="select_a_state">Bir eyalet seçin</string>
+    <string name="select_a_thema">Bir konu seçin</string>
+    <string name="citizenship_exam">Vatandaşlık sınavı</string>
+    <string name="next">Sonraki</string>
+    <string name="last">Önceki</string>
+    <string name="finish">Bitir</string>
+    <string name="first_question">İlk Soru</string>
+    <string name="last_question">Son Soru</string>
+    <string name="start">Başla</string>
+    <string name="finish_exam">Sınavı bitir</string>
+    <string name="show_result">Sonuçları göster</string>
+    <string name="show_questions">Soruları göster</string>
+    <string name="true_answer">Doğru cevap</string>
+    <string name="false_answer">Yanlış cevap</string>
+    <string name="empty_answer">Boş cevap</string>
+    <string name="change_language">Dili değiştir</string>
+    <string name="language_polish">Lehçe</string>
+    <string name="language_german">Almanca</string>
+    <string name="language_english">İngilizce</string>
+    <string name="language_russia">Rusça</string>
+    <string name="language_turkisch">Türkçe</string>
+    <string name="language_arabic">Arapça</string>
+    <string name="sackd">Tekrar dene!</string>
+    <string name="end_the_exam">Sınavı bitirmek istiyor musunuz?</string>
+    <string name="success_explanation">Gerçek sınavdaki başarı yüzdesi</string>
+    <string name="explanation">Açıklamalar</string>
+    <string name="explanation1">Bu testi sizin için kolaylaştırmak için bazı bilgileri ve ipuçlarını bir araya getirdik.</string>
+    <string name="explanation2">Test 33 sorudan oluşmaktadır. Bu soruları cevaplamak için 60 dakikanız var.</string>
+    <string name="explanation3">En az 15 soruyu doğru cevaplarsanız sınavı geçersiniz. En az 17 soruyu doğru cevaplarsanız, daha sonra başka bir vatandaşlık sınavına girmenize gerek kalmaz.</string>
+    <string name="congratulations">Tebrikler</string>
+    <string name="results" translatable="false">Sonuçlar</string>
+    <string name="general_questions">Federal soru</string>
+    <string name="state_questions">Eyalet sorusu</string>
+    <string name="positive">Evet</string>
+    <string name="negative">Hayır</string>
+</resources>
