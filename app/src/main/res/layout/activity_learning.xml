@@ -38,7 +38,8 @@
             android:layout_weight="2"
             android:layout_height="50dp"
             android:src="@drawable/ic_learn"
-            android:contentDescription="@string/learn_logo" />
+            android:contentDescription="@string/learn_logo"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
     <LinearLayout

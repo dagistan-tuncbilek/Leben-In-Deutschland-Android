@@ -37,7 +37,8 @@
             android:layout_weight="2"
             android:layout_height="50dp"
             android:src="@drawable/lang_icon"
-            android:contentDescription="@string/test_logo" />
+            android:contentDescription="@string/test_logo"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
     <androidx.cardview.widget.CardView

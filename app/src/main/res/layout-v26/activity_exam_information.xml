@@ -20,7 +20,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
             android:contentDescription="@string/backarrow"
-            android:src="@drawable/ic_back_24" />
+            android:src="@drawable/ic_back_24"/>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/examInfoToolbar"
@@ -40,7 +40,8 @@
             android:layout_height="50dp"
             android:layout_weight="2"
             android:contentDescription="@string/flag"
-            android:src="@drawable/ic_exam" />
+            android:src="@drawable/ic_exam"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
     <LinearLayout

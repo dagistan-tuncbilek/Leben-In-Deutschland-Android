@@ -38,7 +38,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:contentDescription="@string/exam_logo"
-            android:src="@drawable/ic_exam" />
+            android:src="@drawable/ic_exam"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
     <LinearLayout

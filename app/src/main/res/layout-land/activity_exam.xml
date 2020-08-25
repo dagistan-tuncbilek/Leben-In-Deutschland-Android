@@ -42,7 +42,8 @@
                 android:layout_weight="1"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_exam"
-                android:contentDescription="@string/flag" />
+                android:contentDescription="@string/flag"
+                android:layout_gravity="center_vertical"/>
         </LinearLayout>
 
         <LinearLayout
