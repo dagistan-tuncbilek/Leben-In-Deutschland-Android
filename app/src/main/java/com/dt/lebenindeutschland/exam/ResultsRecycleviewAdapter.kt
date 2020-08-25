@@ -17,8 +17,8 @@ class ResultsRecycleviewAdapter(private val list: ArrayList<Question>) :
     RecyclerView.Adapter<ResultsRecycleviewAdapter.ViewHolder>() {
 
     lateinit var context: Context
-    private val colorTrue = Color.rgb(7, 252, 3)
-    private val colorFalse  = Color.rgb(255, 54, 54)
+    private val colorTrue = Color.rgb(83, 250, 80)
+    private val colorFalse  = Color.rgb(255, 0, 0)
     private val colorWhite  = Color.rgb(255, 255, 255)
 
     override fun onCreateViewHolder(
@@ -42,10 +42,10 @@ class ResultsRecycleviewAdapter(private val list: ArrayList<Question>) :
     @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, i: Int) {
         holder.resultTextQuestion.text = "${i+1}. ${list[i].question}"
-        holder.resultTextAnswerA.text = "A. ${list[i].answerA}"
-        holder.resultTextAnswerB.text = "B. ${list[i].answerB}"
-        holder.resultTextAnswerC.text = "C. ${list[i].answerC}"
-        holder.resultTextAnswerD.text = "D. ${list[i].answerD}"
+        holder.resultTextAnswerA.text = "${list[i].answerA}"
+        holder.resultTextAnswerB.text = "${list[i].answerB}"
+        holder.resultTextAnswerC.text = "${list[i].answerC}"
+        holder.resultTextAnswerD.text = "${list[i].answerD}"
 
         holder.resultTextAnswerA.isChecked = false
         holder.resultTextAnswerB.isChecked = false

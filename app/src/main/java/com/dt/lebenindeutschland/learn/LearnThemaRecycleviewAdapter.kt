@@ -16,6 +16,7 @@ class LearnThemaRecycleviewAdapter(private val list: List<Question>) :
     RecyclerView.Adapter<LearnThemaRecycleviewAdapter.ViewHolder>() {
 
     lateinit var context: Context
+    val colorTrue = Color.rgb(83, 250, 80)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -45,25 +46,25 @@ class LearnThemaRecycleviewAdapter(private val list: List<Question>) :
 
         when (list[i].trueAnswer) {
             "A" -> {
-                holder.themaTextAnswerA.setBackgroundColor(Color.rgb(207, 255, 254))
+                holder.themaTextAnswerA.setBackgroundColor(colorTrue)
                 holder.themaTextAnswerB.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerC.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerD.setBackgroundColor(Color.WHITE)
             }
             "B" -> {
-                holder.themaTextAnswerB.setBackgroundColor(Color.rgb(207, 255, 254))
+                holder.themaTextAnswerB.setBackgroundColor(colorTrue)
                 holder.themaTextAnswerA.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerC.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerD.setBackgroundColor(Color.WHITE)
             }
             "C" -> {
-                holder.themaTextAnswerC.setBackgroundColor(Color.rgb(207, 255, 254))
+                holder.themaTextAnswerC.setBackgroundColor(colorTrue)
                 holder.themaTextAnswerB.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerA.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerD.setBackgroundColor(Color.WHITE)
             }
             "D" -> {
-                holder.themaTextAnswerD.setBackgroundColor(Color.rgb(207, 255, 254))
+                holder.themaTextAnswerD.setBackgroundColor(colorTrue)
                 holder.themaTextAnswerB.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerC.setBackgroundColor(Color.WHITE)
                 holder.themaTextAnswerA.setBackgroundColor(Color.WHITE)

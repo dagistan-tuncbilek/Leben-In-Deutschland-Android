@@ -3,16 +3,19 @@ package com.dt.lebenindeutschland
 import android.app.Activity
 import android.content.Intent
 import android.content.res.Configuration
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.dt.lebenindeutschland.exam.ExamInformationActivity
-import com.dt.lebenindeutschland.utility.*
 import com.dt.lebenindeutschland.learn.LearningActivity
 import com.dt.lebenindeutschland.test.TestActivity
+import com.dt.lebenindeutschland.utility.DataBaseHandler
+import com.dt.lebenindeutschland.utility.Language
+import com.dt.lebenindeutschland.utility.State
 import java.util.*
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
@@ -26,31 +29,45 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         super.onCreate(savedInstanceState)
         val language = DataBaseHandler(this).setUserSettingsFromDatabase()
         if (language != Language.NOT_SELECTED) setLocate(language.getLanguage())
-        if (selectedState == State.NOT_SELECTED) startActivity(Intent(this, SelectStateActivity::class.java))
+        if (selectedState == State.NOT_SELECTED) startActivity(
+            Intent(
+                this,
+                SelectStateActivity::class.java
+            )
+        )
         setContentView(R.layout.activity_main)
         initialize()
-    }
-
-    private fun setLocate(language: String) {
-        val locale = Locale(language)
-        Locale.setDefault(locale)
-        val config = Configuration()
-        config.setLocale(locale)
-        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
-        val editor = getSharedPreferences("Settings", Activity.MODE_PRIVATE).edit()
-        editor.putString("My_Lang", language)
-        editor.apply()
     }
 
     override fun onClick(v: View?) {
         Log.d(TAG, "Clicked")
         if (v != null) {
             when(v.id){
-                R.id.mainCardViewExam -> startActivity(Intent(this, ExamInformationActivity::class.java))
-                R.id.mainCardViewLearning -> startActivity(Intent(this, LearningActivity::class.java))
+                R.id.mainCardViewExam -> startActivity(
+                    Intent(
+                        this,
+                        ExamInformationActivity::class.java
+                    )
+                )
+                R.id.mainCardViewLearning -> startActivity(
+                    Intent(
+                        this,
+                        LearningActivity::class.java
+                    )
+                )
                 R.id.mainCardViewTest -> startActivity(Intent(this, TestActivity::class.java))
-                R.id.mainCardViewSelectState -> startActivity(Intent(this, SelectStateActivity::class.java))
-                R.id.mainCardVievLanguage -> startActivity(Intent(this, LanguageActivity::class.java))
+                R.id.mainCardViewSelectState -> startActivity(
+                    Intent(
+                        this,
+                        SelectStateActivity::class.java
+                    )
+                )
+                R.id.mainCardVievLanguage -> startActivity(
+                    Intent(
+                        this,
+                        LanguageActivity::class.java
+                    )
+                )
             }
         }
     }
@@ -67,7 +84,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         mainCardViewSelectState.setOnClickListener(this)
         mainCardVievLanguage = findViewById(R.id.mainCardVievLanguage)
         mainCardVievLanguage.setOnClickListener(this)
+    }
 
+    private fun setLocate(language: String) {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.setLocale(locale)
+        @Suppress("DEPRECATION")
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+        val editor = getSharedPreferences("Settings", Activity.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", language)
+        editor.apply()
     }
 
     companion object {

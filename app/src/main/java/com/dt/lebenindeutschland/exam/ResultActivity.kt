@@ -78,11 +78,11 @@ class ResultActivity : AppCompatActivity() {
             if(showQuestion) {
                 resultsRecyclerView.visibility =  View.VISIBLE
                 resultPage.visibility = View.GONE
-                resultButton.text = getString(R.string.show_questions)
+                resultButton.text = getString(R.string.show_result)
             } else {
                 resultsRecyclerView.visibility =  View.GONE
                 resultPage.visibility = View.VISIBLE
-                resultButton.text = getString(R.string.show_result)
+                resultButton.text = getString(R.string.show_questions)
             }
         }
         resultImg300 = findViewById(R.id.resultImg300)

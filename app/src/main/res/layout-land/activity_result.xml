@@ -298,7 +298,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorBlueDark"
-            android:text="@string/show_result"
+            android:text="@string/show_questions"
             android:textAllCaps="false"
             android:textColor="@color/colorYellow"
             android:textSize="18sp" />

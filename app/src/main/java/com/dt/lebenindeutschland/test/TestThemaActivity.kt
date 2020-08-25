@@ -18,8 +18,8 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
     private val db: DataBaseHandler = DataBaseHandler(this)
     private var index: Int = 0
     private var questionChecked: Boolean = false
-    private val colorTrue = Color.rgb(7, 252, 3)
-    private val colorFalse  = Color.rgb(255, 54, 54)
+    private val colorTrue = Color.rgb(83, 250, 80)
+    private val colorFalse  = Color.rgb(255, 0, 0)
     private val colorWhite  = Color.rgb(255, 255, 255)
     private lateinit var testThemaToolbar:Toolbar
     private lateinit var testThemaQuestion: TextView
@@ -167,11 +167,11 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         testThemaAnswerB.setBackgroundColor(colorWhite)
         testThemaAnswerC.setBackgroundColor(colorWhite)
         testThemaAnswerD.setBackgroundColor(colorWhite)
-        testThemaQuestion.text = questionList[index].question
-        testThemaAnswerA.text = " A. ${questionList[index].answerA}"
-        testThemaAnswerB.text = " B. ${questionList[index].answerB}"
-        testThemaAnswerC.text = " C. ${questionList[index].answerC}"
-        testThemaAnswerD.text = " D. ${questionList[index].answerD}"
+        testThemaQuestion.text = "${index+1}. ${questionList[index].question}"
+        testThemaAnswerA.text = "${questionList[index].answerA}"
+        testThemaAnswerB.text = "${questionList[index].answerB}"
+        testThemaAnswerC.text = "${questionList[index].answerC}"
+        testThemaAnswerD.text = "${questionList[index].answerD}"
         testThemaSuccessText.text = "${getString(R.string.success_explanation)} ${questionList[index].success}"
         if (questionList[index].hasPhoto) {
             testImgQestion.visibility = View.VISIBLE

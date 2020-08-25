@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:orientation="vertical"
     tools:context=".exam.ExamInformationActivity">
 
-
     <LinearLayout
+        android:id="@+id/liToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFF388"
@@ -44,38 +43,52 @@
             android:src="@drawable/ic_exam" />
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/liExplanation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/explanation1"
-        android:textColor="@color/colorBlack" />
+        android:layout_below="@+id/liToolbar"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/explanation2"
-        android:textColor="@color/colorBlack" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/explanation1"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/explanation3"
-        android:textColor="@color/colorBlack" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/explanation2"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/examInfoButton"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/colorBlueDark"
-        android:text="@string/start"
-        android:textAllCaps="false"
-        android:textColor="@color/colorWhite" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/explanation3"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-</LinearLayout>
+
+        <Button
+            android:id="@+id/examInfoButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorBlueDark"
+            android:text="@string/start"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
