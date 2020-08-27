@@ -14,6 +14,7 @@ import com.dt.lebenindeutschland.test.TestActivity
 import com.dt.lebenindeutschland.utility.DataBaseHandler
 import com.dt.lebenindeutschland.utility.Language
 import com.dt.lebenindeutschland.utility.State
+import com.dt.lebenindeutschland.utility.userLanguage
 import java.util.*
 
 
@@ -27,8 +28,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val language = DataBaseHandler(this).setUserSettingsFromDatabase()
-        if (language != Language.NOT_SELECTED) setLocate(language.getLanguage())
+        DataBaseHandler(this).setUserSettingsFromDatabase(this)
+        setLanguage()
         if (selectedState == State.NOT_SELECTED) startActivity(
             Intent(
                 this,
@@ -86,15 +87,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         mainCardVievLanguage.setOnClickListener(this)
     }
 
-    private fun setLocate(language: String) {
-        val locale = Locale(language)
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        setLanguage()
+    }
+
+    private fun setLanguage() {
+        val locale = Locale(userLanguage.getLanguage())
         Locale.setDefault(locale)
         val config = Configuration()
         config.setLocale(locale)
         @Suppress("DEPRECATION")
-        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
-        val editor = getSharedPreferences("Settings", Activity.MODE_PRIVATE).edit()
-        editor.putString("My_Lang", language)
+        this.resources.updateConfiguration(config, this.resources.displayMetrics)
+        val editor = this.getSharedPreferences("Settings", MODE_PRIVATE).edit()
+        editor.putString("My_Lang", userLanguage.getLanguage())
         editor.apply()
     }
 

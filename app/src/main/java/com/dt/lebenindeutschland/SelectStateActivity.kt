@@ -1,6 +1,7 @@
 package com.dt.lebenindeutschland
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,6 +12,8 @@ import androidx.cardview.widget.CardView
 import com.dt.lebenindeutschland.utility.DataBaseHandler
 import com.dt.lebenindeutschland.utility.STATE_ID
 import com.dt.lebenindeutschland.utility.State
+import com.dt.lebenindeutschland.utility.userLanguage
+import java.util.*
 
 var selectedState: State = State.NOT_SELECTED
 
@@ -36,6 +39,7 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setLanguage()
         setContentView(R.layout.activity_select_state)
         initialize()
     }
@@ -119,6 +123,23 @@ class SelectStateActivity : AppCompatActivity(), View.OnClickListener {
         cardThrungen = findViewById(R.id.cardThrungen)
         cardThrungen.setOnClickListener(this)
         Log.d(TAG, " initileized")
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        setLanguage()
+    }
+
+    private fun setLanguage() {
+        val locale = Locale(userLanguage.getLanguage())
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.setLocale(locale)
+        @Suppress("DEPRECATION")
+        this.resources.updateConfiguration(config, this.resources.displayMetrics)
+        val editor = this.getSharedPreferences("Settings", MODE_PRIVATE).edit()
+        editor.putString("My_Lang", userLanguage.getLanguage())
+        editor.apply()
     }
 
     companion object {

@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.dt.lebenindeutschland.R
@@ -16,8 +15,8 @@ import com.dt.lebenindeutschland.utility.Thema
 import com.dt.lebenindeutschland.utility.ThemaData
 import com.dt.lebenindeutschland.utility.selectedThema
 
-class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
-    RecyclerView.Adapter<LearningRecycleviewAdapter.ViewHolder>() {
+class LearningRecyclerviewAdapter(private val themeList: List<ThemaData>) :
+    RecyclerView.Adapter<LearningRecyclerviewAdapter.ViewHolder>() {
 
     lateinit var context: Context
 
@@ -33,13 +32,13 @@ class LearningRecycleviewAdapter(private val list: List<ThemaData>) :
     }
 
     override fun getItemCount(): Int {
-        return list.count()
+        return themeList.count()
     }
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, i: Int) {
-        holder.themaNameLearnTxt.text = list[i].themaName
-        holder.themaCountLearnTxt.text = "${list[i].max}"
+        holder.themaNameLearnTxt.text = themeList[i].themaName
+        holder.themaCountLearnTxt.text = "${themeList[i].max}"
         if (i % 2 == 0) {
             holder.parent.setCardBackgroundColor(Color.rgb(255, 255, 255))
         } else {

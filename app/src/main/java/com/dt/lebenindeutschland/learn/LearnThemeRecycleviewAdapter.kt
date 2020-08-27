@@ -12,8 +12,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dt.lebenindeutschland.R
 
-class LearnThemaRecycleviewAdapter(private val list: List<Question>) :
-    RecyclerView.Adapter<LearnThemaRecycleviewAdapter.ViewHolder>() {
+class LearnThemeRecycleviewAdapter(private val list: List<Question>) :
+    RecyclerView.Adapter<LearnThemeRecycleviewAdapter.ViewHolder>() {
 
     lateinit var context: Context
     val colorTrue = Color.rgb(83, 250, 80)
@@ -23,7 +23,7 @@ class LearnThemaRecycleviewAdapter(private val list: List<Question>) :
         viewType: Int
     ): ViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(
-            R.layout.list_item_learn_thema,
+            R.layout.list_item_learn_theme,
             parent,
             false
         )

@@ -1,8 +1,10 @@
 package com.dt.lebenindeutschland.exam
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -15,6 +17,9 @@ import com.dt.lebenindeutschland.R
 import com.dt.lebenindeutschland.selectedState
 import com.dt.lebenindeutschland.utility.DataBaseHandler
 import com.dt.lebenindeutschland.utility.Question
+import com.dt.lebenindeutschland.utility.userLanguage
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ExamActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -34,11 +39,30 @@ class ExamActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setLanguage()
         setContentView(R.layout.activity_exam)
         initialize()
         createExam()
         setQuestion()
     }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        setLanguage()
+    }
+
+    private fun setLanguage() {
+        val locale = Locale(userLanguage.getLanguage())
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.setLocale(locale)
+        @Suppress("DEPRECATION")
+        this.resources.updateConfiguration(config, this.resources.displayMetrics)
+        val editor = this.getSharedPreferences("Settings", MODE_PRIVATE).edit()
+        editor.putString("My_Lang", userLanguage.getLanguage())
+        editor.apply()
+    }
+
 
     override fun onClick(v: View?) {
         when(v?.id){
@@ -107,7 +131,7 @@ class ExamActivity : AppCompatActivity(), View.OnClickListener {
 
     @SuppressLint("SetTextI18n", "UseCompatLoadingForDrawables")
     private fun setQuestion() {
-        examToolbar.subtitle = if (questionList[index].themaId == 0) getString(R.string.state_questions) else getString(R.string.general_questions)
+        examToolbar.subtitle = if (questionList[index].themeId == 0) getString(R.string.state_questions) else getString(R.string.general_questions)
         examAnswerA.isChecked = false
         examAnswerB.isChecked = false
         examAnswerC.isChecked = false

@@ -167,7 +167,6 @@
                     android:layout_height="100dp"
                     android:layout_weight="2"
                     android:contentDescription="@string/exam_logo"
-                    android:src="@drawable/ic_success"
                     android:visibility="visible" />
 
                 <ImageView
@@ -176,7 +175,6 @@
                     android:layout_height="100dp"
                     android:layout_weight="2"
                     android:contentDescription="@string/exam_logo"
-                    android:src="@drawable/ic_fail"
                     android:visibility="visible" />
 
 

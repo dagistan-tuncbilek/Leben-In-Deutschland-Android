@@ -25,6 +25,7 @@ class ResultsRecycleviewAdapter(private val list: ArrayList<Question>) :
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
+
         val view: View = LayoutInflater.from(parent.context).inflate(
             R.layout.list_item_results,
             parent,

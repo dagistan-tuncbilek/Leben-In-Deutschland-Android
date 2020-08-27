@@ -76,7 +76,7 @@ class TestRecycleviewAdapter (private val list: MutableList<ThemaData>) : Recycl
                 19 -> selectedThema = Thema.MIGRATIONSGESCHICHTE
                 20 -> selectedThema = Thema.INTERKULTURELLES
             }
-            v?.context?.startActivity(Intent(parent.context, TestThemaActivity::class.java))
+            v?.context?.startActivity(Intent(parent.context, TestThemeActivity::class.java))
         }
     }
 

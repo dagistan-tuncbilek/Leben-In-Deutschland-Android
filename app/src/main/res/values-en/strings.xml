@@ -25,7 +25,7 @@
     <string name="language_german">German</string>
     <string name="language_english">English</string>
     <string name="language_russia">Russian</string>
-    <string name="language_turkisch">Turkish</string>
+    <string name="language_turkish">Turkish</string>
     <string name="language_arabic">Arabic</string>
     <string name="sackd">Try again!</string>
     <string name="end_the_exam" translatable="false">Would you like to finish the exam?</string>

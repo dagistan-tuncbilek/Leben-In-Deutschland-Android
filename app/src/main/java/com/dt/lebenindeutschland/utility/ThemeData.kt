@@ -6,10 +6,10 @@ data class ThemaData(
     var progress: Int
 )
 
-fun getThemasData(): ArrayList<ThemaData> {
+fun getThemesData(): ArrayList<ThemaData> {
 
     return arrayListOf(
-        ThemaData("Land/Staat", 10, 0),
+        ThemaData("Bundesland/Staat", 10, 0),
         ThemaData("Verfassungsorgane", 31, 0),
         ThemaData("Verfassungsprinzipien", 22, 0),
         ThemaData("Föderalismus", 8, 0),

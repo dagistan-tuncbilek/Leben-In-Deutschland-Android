@@ -9,16 +9,26 @@
         android:roundIcon="@drawable/ic_round_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LanguageActivity"></activity>
-        <activity android:name=".exam.ResultActivity" />
-        <activity android:name=".exam.ExamActivity" />
-        <activity android:name=".exam.ExamInformationActivity" />
-        <activity android:name=".test.TestThemaActivity" />
-        <activity android:name=".test.TestActivity" />
-        <activity android:name=".learn.ThemaActivity" />
-        <activity android:name=".SelectStateActivity" />
-        <activity android:name=".learn.LearningActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LanguageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".exam.ResultActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".exam.ExamActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".exam.ExamInformationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".test.TestThemeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".test.TestActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".learn.ThemaActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".SelectStateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".learn.LearningActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

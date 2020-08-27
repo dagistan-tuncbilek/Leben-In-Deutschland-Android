@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView
 import com.dt.lebenindeutschland.utility.DataBaseHandler
 import com.dt.lebenindeutschland.utility.LANGUAGE_ID
 import com.dt.lebenindeutschland.utility.Language
+import com.dt.lebenindeutschland.utility.userLanguage
 import java.util.*
 
 class LanguageActivity : AppCompatActivity(), View.OnClickListener  {
@@ -21,10 +22,11 @@ class LanguageActivity : AppCompatActivity(), View.OnClickListener  {
     private lateinit var languageCardViewRussia: CardView
     private lateinit var languageCardViewTurkish: CardView
     private lateinit var languageCardViewArab: CardView
-    private lateinit var languageCardViewPolnisch: CardView
+    private lateinit var languageCardViewPolish: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setLanguage()
         setContentView(R.layout.activity_language)
         initialize()
     }
@@ -32,12 +34,12 @@ class LanguageActivity : AppCompatActivity(), View.OnClickListener  {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.languageBackArrow -> startActivity(Intent(this, MainActivity::class.java))
-            R.id.languageCardViewGerman -> setLocate (Language.GERMAN)
-            R.id.languageCardViewEnglish -> setLocate (Language.ENGLISH)
-            R.id.languageCardViewRussia -> setLocate (Language.RUSSIAN)
-            R.id.languageCardViewTurkish -> setLocate (Language.TURKISH)
-            R.id.languageCardViewArab -> setLocate (Language.ARABIC)
-            R.id.languageCardViewPolnisch -> setLocate (Language.POLISH)
+            R.id.languageCardViewGerman -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.GERMAN.ordinal)
+            R.id.languageCardViewEnglish -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.ENGLISH.ordinal)
+            R.id.languageCardViewRussia -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.RUSSIAN.ordinal)
+            R.id.languageCardViewTurkish -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.TURKISH.ordinal)
+            R.id.languageCardViewArab -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.ARABIC.ordinal)
+            R.id.languageCardViewPolish -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.POLISH.ordinal)
         }
         startActivity(Intent(this, MainActivity::class.java))
     }
@@ -55,19 +57,25 @@ class LanguageActivity : AppCompatActivity(), View.OnClickListener  {
         languageCardViewTurkish.setOnClickListener(this)
         languageCardViewArab = findViewById(R.id.languageCardViewArab)
         languageCardViewArab.setOnClickListener(this)
-        languageCardViewPolnisch = findViewById(R.id.languageCardViewPolnisch)
-        languageCardViewPolnisch.setOnClickListener(this)
+        languageCardViewPolish = findViewById(R.id.languageCardViewPolish)
+        languageCardViewPolish.setOnClickListener(this)
     }
 
-    private fun setLocate(language: Language) {
-        DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, language.ordinal)
-        val locale = Locale(language.getLanguage())
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        setLanguage()
+    }
+
+    private fun setLanguage() {
+        val locale = Locale(userLanguage.getLanguage())
         Locale.setDefault(locale)
         val config = Configuration()
         config.setLocale(locale)
-        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
-        val editor = getSharedPreferences("Settings", Activity.MODE_PRIVATE).edit()
-        editor.putString("My_Lang", language.getLanguage())
+        @Suppress("DEPRECATION")
+        this.resources.updateConfiguration(config, this.resources.displayMetrics)
+        val editor = this.getSharedPreferences("Settings", MODE_PRIVATE).edit()
+        editor.putString("My_Lang", userLanguage.getLanguage())
         editor.apply()
     }
+
 }

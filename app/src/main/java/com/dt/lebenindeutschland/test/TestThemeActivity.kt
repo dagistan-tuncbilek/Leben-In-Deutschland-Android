@@ -2,6 +2,7 @@ package com.dt.lebenindeutschland.test
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,8 +12,10 @@ import androidx.appcompat.widget.Toolbar
 import com.dt.lebenindeutschland.R
 import com.dt.lebenindeutschland.utility.*
 import com.dt.lebenindeutschland.selectedState
+import java.util.*
+import kotlin.collections.ArrayList
 
-class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
+class TestThemeActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var questionList: ArrayList<Question>
     private val db: DataBaseHandler = DataBaseHandler(this)
@@ -36,9 +39,27 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test_thema)
+        setLanguage()
+        setContentView(R.layout.activity_test_theme)
         initialize()
         createQuestionList()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        setLanguage()
+    }
+
+    private fun setLanguage() {
+        val locale = Locale(userLanguage.getLanguage())
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.setLocale(locale)
+        @Suppress("DEPRECATION")
+        this.resources.updateConfiguration(config, this.resources.displayMetrics)
+        val editor = this.getSharedPreferences("Settings", MODE_PRIVATE).edit()
+        editor.putString("My_Lang", userLanguage.getLanguage())
+        editor.apply()
     }
 
     private fun createQuestionList() {
@@ -158,7 +179,7 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
     @SuppressLint("SetTextI18n", "UseCompatLoadingForDrawables")
     private fun setQuestion() {
         if (selectedThema == Thema.BUNDESLANDER) testThemaToolbar.subtitle = selectedState.getStateName()
-        else testThemaToolbar.subtitle = selectedThema.getThemaName()
+        else testThemaToolbar.subtitle = selectedThema.getThemeName()
         testThemaAnswerA.isChecked = false
         testThemaAnswerB.isChecked = false
         testThemaAnswerC.isChecked = false
@@ -168,10 +189,10 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         testThemaAnswerC.setBackgroundColor(colorWhite)
         testThemaAnswerD.setBackgroundColor(colorWhite)
         testThemaQuestion.text = "${index+1}. ${questionList[index].question}"
-        testThemaAnswerA.text = "${questionList[index].answerA}"
-        testThemaAnswerB.text = "${questionList[index].answerB}"
-        testThemaAnswerC.text = "${questionList[index].answerC}"
-        testThemaAnswerD.text = "${questionList[index].answerD}"
+        testThemaAnswerA.text = questionList[index].answerA
+        testThemaAnswerB.text = questionList[index].answerB
+        testThemaAnswerC.text = questionList[index].answerC
+        testThemaAnswerD.text = questionList[index].answerD
         testThemaSuccessText.text = "${getString(R.string.success_explanation)} ${questionList[index].success}"
         if (questionList[index].hasPhoto) {
             testImgQestion.visibility = View.VISIBLE
@@ -214,6 +235,6 @@ class TestThemaActivity : AppCompatActivity(), View.OnClickListener {
         return if (selectedThema == Thema.BUNDESLANDER)
             db.readSelectedData(IntArray(10){ it + selectedState.ordinal*10 + 301 })
          else
-            db.readSelectedData(selectedThema.getThemaQuestionIdList())
+            db.readSelectedData(selectedThema.getThemeQuestionIdList())
     }
 }
