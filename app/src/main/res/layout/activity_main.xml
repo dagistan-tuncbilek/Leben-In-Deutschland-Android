@@ -31,7 +31,7 @@
             android:layout_height="50dp"
             android:layout_weight="3"
             android:contentDescription="@string/flag"
-            android:src="@drawable/ic_flag"
+            android:src="@mipmap/ic_flag"
             android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
@@ -61,7 +61,7 @@
                     android:layout_height="100dp"
                     android:layout_centerVertical="true"
                     android:contentDescription="@string/learn_logo"
-                    android:src="@drawable/ic_learn" />
+                    android:src="@mipmap/ic_learn" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -94,7 +94,7 @@
                     android:layout_height="100dp"
                     android:layout_centerVertical="true"
                     android:contentDescription="@string/test_logo"
-                    android:src="@drawable/ic_test" />
+                    android:src="@mipmap/ic_test" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                     android:layout_height="100dp"
                     android:layout_centerVertical="true"
                     android:contentDescription="@string/exam_logo"
-                    android:src="@drawable/ic_exam" />
+                    android:src="@mipmap/ic_exam" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -160,7 +160,7 @@
                     android:layout_height="100dp"
                     android:layout_centerVertical="true"
                     android:contentDescription="@string/select_state"
-                    android:src="@drawable/ic_bundeslander" />
+                    android:src="@mipmap/ic_bundeslander" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -193,7 +193,7 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/logo"
-                    android:src="@drawable/lang_icon"
+                    android:src="@mipmap/lang_icon"
                     android:layout_marginStart="10dp"/>
 
                 <TextView

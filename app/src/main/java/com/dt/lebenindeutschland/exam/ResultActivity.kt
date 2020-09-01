@@ -57,10 +57,10 @@ class ResultActivity : AppCompatActivity() {
         resultsRecyclerView.layoutManager = linearLayoutManager
         calculateResults()
         initilaize()
-        if (userTrueAnswers >= 15) resultImg300.setImageResource(R.drawable.ic_success)
-        else resultImg300.setImageResource(R.drawable.ic_fail)
-        if (userTrueAnswersState >= 2) resultImgState.setImageResource(R.drawable.ic_success)
-        else resultImgState.setImageResource(R.drawable.ic_fail)
+        if (userTrueAnswers >= 15) resultImg300.setImageResource(R.mipmap.ic_success)
+        else resultImg300.setImageResource(R.mipmap.ic_fail)
+        if (userTrueAnswersState >= 2) resultImgState.setImageResource(R.mipmap.ic_success)
+        else resultImgState.setImageResource(R.mipmap.ic_fail)
         if (userTrueAnswers >= 15 && userTrueAnswersState >= 2) textResultSuccess.text = getString(R.string.congratulations)
         else textResultSuccess.text = getString(R.string.sackd)
     }

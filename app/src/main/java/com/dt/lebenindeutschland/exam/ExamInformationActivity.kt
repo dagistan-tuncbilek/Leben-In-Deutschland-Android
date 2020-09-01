@@ -21,7 +21,7 @@ class ExamInformationActivity : AppCompatActivity(), View.OnClickListener  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setLanguage()
-        DataBaseHandler(this).setUserSettingsFromDatabase(this)
+        DataBaseHandler(this).setUserSettingsFromDatabase()
         setContentView(R.layout.activity_exam_information)
         initialize()
     }

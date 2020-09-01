@@ -41,7 +41,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_exam"
+                android:src="@mipmap/ic_exam"
                 android:contentDescription="@string/flag"
                 android:layout_gravity="center_vertical"/>
         </LinearLayout>

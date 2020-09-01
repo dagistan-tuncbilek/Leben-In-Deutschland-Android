@@ -81,7 +81,7 @@ class LearningRecyclerviewAdapter(private val themeList: List<ThemaData>) :
                     19 -> selectedThema = Thema.MIGRATIONSGESCHICHTE
                     20 -> selectedThema = Thema.INTERKULTURELLES
                 }
-                v.context.startActivity(Intent(parent.context, ThemaActivity::class.java))
+                v.context.startActivity(Intent(parent.context, ThemeActivity::class.java))
             }
         }
     }

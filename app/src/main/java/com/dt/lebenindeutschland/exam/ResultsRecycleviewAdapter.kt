@@ -84,7 +84,7 @@ class ResultsRecycleviewAdapter(private val list: ArrayList<Question>) :
         if (list[i].hasPhoto) {
             holder.resultImgQestion.visibility = View.VISIBLE
             val imageName = "i${list[i].id}"
-            val number : Int = context.resources.getIdentifier(imageName,"drawable",context.packageName)
+            val number : Int = context.resources.getIdentifier(imageName,"mipmap",context.packageName)
             val res = context.resources.getDrawable(number, context.theme)
             holder.resultImgQestion.setImageDrawable(res)
         } else {

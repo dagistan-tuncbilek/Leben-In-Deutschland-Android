@@ -75,7 +75,7 @@ class LearnThemeRecycleviewAdapter(private val list: List<Question>) :
             val imageName = "i${list[i].id}"
             val number : Int = context.resources.getIdentifier(
                 imageName,
-                "drawable",
+                "mipmap",
                 context.packageName
             )
             val res = context.resources.getDrawable(number, context.theme)

@@ -39,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="50dp"
-            android:src="@drawable/ic_bundeslander"
+            android:src="@mipmap/ic_bundeslander"
             android:contentDescription="@string/test_logo"
             android:layout_gravity="center_vertical"/>
     </LinearLayout>
@@ -74,7 +74,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_baden_wuttemberg"
+                    android:src="@mipmap/map_baden_wuttemberg"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -111,7 +111,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_bayern"
+                    android:src="@mipmap/map_bayern"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -148,7 +148,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_berlin"
+                    android:src="@mipmap/map_berlin"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -185,7 +185,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_brandenburg"
+                    android:src="@mipmap/map_brandenburg"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -221,7 +221,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_bremen"
+                    android:src="@mipmap/map_bremen"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -257,7 +257,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_hamburg"
+                    android:src="@mipmap/map_hamburg"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -295,7 +295,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_hessen"
+                    android:src="@mipmap/map_hessen"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -331,7 +331,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_meklenburg"
+                    android:src="@mipmap/map_meklenburg"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -367,7 +367,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_niedersachen"
+                    android:src="@mipmap/map_niedersachen"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -404,7 +404,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_nw"
+                    android:src="@mipmap/map_nw"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -440,7 +440,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_saarland"
+                    android:src="@mipmap/map_saarland"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -477,7 +477,7 @@
                     android:contentDescription="@string/rheinland"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_rheinland"/>
+                    android:src="@mipmap/map_rheinland"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -512,7 +512,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_sachsen"
+                    android:src="@mipmap/map_sachsen"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -548,7 +548,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_sachsen_anhalt"
+                    android:src="@mipmap/map_sachsen_anhalt"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -584,7 +584,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_schlewsig"
+                    android:src="@mipmap/map_schlewsig"
                     android:contentDescription="@string/logo" />
 
                 <TextView
@@ -620,7 +620,7 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/map_thrungen"
+                    android:src="@mipmap/map_thrungen"
                     android:contentDescription="@string/logo" />
 
                 <TextView

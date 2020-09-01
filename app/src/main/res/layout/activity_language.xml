@@ -36,7 +36,7 @@
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="50dp"
-            android:src="@drawable/lang_icon"
+            android:src="@mipmap/lang_icon"
             android:contentDescription="@string/test_logo"
             android:layout_gravity="center_vertical"/>
     </LinearLayout>
@@ -63,7 +63,7 @@
                 android:layout_height="50dp"
                 android:layout_centerVertical="true"
                 android:contentDescription="@string/learn_logo"
-                android:src="@drawable/lang_german"
+                android:src="@mipmap/lang_german"
                 android:layout_marginStart="20dp"/>
 
             <TextView
@@ -99,7 +99,7 @@
                 android:layout_height="50dp"
                 android:layout_centerVertical="true"
                 android:contentDescription="@string/learn_logo"
-                android:src="@drawable/lang_english"
+                android:src="@mipmap/lang_english"
                 android:layout_marginStart="20dp"/>
 
             <TextView
@@ -137,7 +137,7 @@
                 android:layout_height="50dp"
                 android:layout_centerVertical="true"
                 android:contentDescription="@string/learn_logo"
-                android:src="@drawable/lang_russia"
+                android:src="@mipmap/lang_russia"
                 android:layout_marginStart="20dp"/>
 
             <TextView
@@ -173,7 +173,7 @@
                 android:layout_height="50dp"
                 android:layout_centerVertical="true"
                 android:contentDescription="@string/learn_logo"
-                android:src="@drawable/lang_turkey"
+                android:src="@mipmap/lang_turkey"
                 android:layout_marginStart="20dp"/>
 
             <TextView
@@ -209,7 +209,7 @@
                 android:layout_height="50dp"
                 android:layout_centerVertical="true"
                 android:contentDescription="@string/learn_logo"
-                android:src="@drawable/lang_arabic"
+                android:src="@mipmap/lang_arabic"
                 android:layout_marginStart="20dp"/>
 
             <TextView
@@ -245,7 +245,7 @@
                 android:layout_height="50dp"
                 android:layout_centerVertical="true"
                 android:contentDescription="@string/learn_logo"
-                android:src="@drawable/lang_polish"
+                android:src="@mipmap/lang_polish"
                 android:layout_marginStart="20dp"/>
 
             <TextView

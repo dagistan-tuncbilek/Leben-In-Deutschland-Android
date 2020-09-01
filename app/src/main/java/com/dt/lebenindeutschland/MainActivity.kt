@@ -1,6 +1,5 @@
 package com.dt.lebenindeutschland
 
-import android.app.Activity
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
@@ -12,7 +11,6 @@ import com.dt.lebenindeutschland.exam.ExamInformationActivity
 import com.dt.lebenindeutschland.learn.LearningActivity
 import com.dt.lebenindeutschland.test.TestActivity
 import com.dt.lebenindeutschland.utility.DataBaseHandler
-import com.dt.lebenindeutschland.utility.Language
 import com.dt.lebenindeutschland.utility.State
 import com.dt.lebenindeutschland.utility.userLanguage
 import java.util.*
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DataBaseHandler(this).setUserSettingsFromDatabase(this)
+        DataBaseHandler(this).setUserSettingsFromDatabase()
         setLanguage()
         if (selectedState == State.NOT_SELECTED) startActivity(
             Intent(

@@ -150,7 +150,7 @@ class ExamActivity : AppCompatActivity(), View.OnClickListener {
         if (questionList[index].hasPhoto) {
             examQuestionFoto.visibility = View.VISIBLE
             val imageName = "i${questionList[index].id}"
-            val number = resources.getIdentifier(imageName,"drawable", packageName)
+            val number = resources.getIdentifier(imageName,"mipmap", packageName)
             val res = resources.getDrawable(number, this.theme)
             examQuestionFoto.setImageDrawable(res)
         } else {

@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_theme.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class ThemaActivity : AppCompatActivity(), View.OnClickListener  {
+class ThemeActivity : AppCompatActivity(), View.OnClickListener  {
 
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var adapter: LearnThemeRecycleviewAdapter

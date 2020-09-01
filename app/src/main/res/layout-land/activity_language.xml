@@ -38,7 +38,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="2"
             android:contentDescription="@string/test_logo"
-            android:src="@drawable/lang_icon" />
+            android:src="@mipmap/lang_icon" />
     </LinearLayout>
 
     <LinearLayout
@@ -70,7 +70,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
                     android:contentDescription="@string/learn_logo"
-                    android:src="@drawable/lang_german" />
+                    android:src="@mipmap/lang_german" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
                     android:contentDescription="@string/learn_logo"
-                    android:src="@drawable/lang_english" />
+                    android:src="@mipmap/lang_english" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -149,7 +149,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
                     android:contentDescription="@string/learn_logo"
-                    android:src="@drawable/lang_russia" />
+                    android:src="@mipmap/lang_russia" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -184,7 +184,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
                     android:contentDescription="@string/learn_logo"
-                    android:src="@drawable/lang_turkey" />
+                    android:src="@mipmap/lang_turkey" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -228,7 +228,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
                     android:contentDescription="@string/learn_logo"
-                    android:src="@drawable/lang_arabic" />
+                    android:src="@mipmap/lang_arabic" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -263,7 +263,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
                     android:contentDescription="@string/learn_logo"
-                    android:src="@drawable/lang_polish" />
+                    android:src="@mipmap/lang_polish" />
 
                 <TextView
                     android:layout_width="match_parent"

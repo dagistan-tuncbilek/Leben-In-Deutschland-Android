@@ -1,15 +1,12 @@
 package com.dt.lebenindeutschland.utility
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.ContentValues
 import android.content.Context
-import android.content.res.Configuration
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.dt.lebenindeutschland.selectedState
-import java.util.*
 import kotlin.collections.ArrayList
 
 var userLanguage = Language.NOT_SELECTED
@@ -83,7 +80,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
     }
 
     @SuppressLint("Recycle")
-    fun setUserSettingsFromDatabase (context: Context){
+    fun setUserSettingsFromDatabase() {
         val db = this.readableDatabase
         val columns = arrayOf(COL_ID_UTIL, COL_VALUE)
         val cursor: Cursor = db.query(TABLE_UTILITY, columns, null, null, null, null, null)

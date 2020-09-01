@@ -199,7 +199,7 @@ class TestThemeActivity : AppCompatActivity(), View.OnClickListener {
             val imageName = "i${questionList[index].id}"
             val number : Int = resources.getIdentifier(
                 imageName,
-                "drawable",
+                "mipmap",
                 packageName
             )
             val res = resources.getDrawable(number, this.theme)
