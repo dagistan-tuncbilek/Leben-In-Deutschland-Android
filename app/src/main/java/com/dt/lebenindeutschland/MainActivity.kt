@@ -13,6 +13,7 @@ import com.dt.lebenindeutschland.test.TestActivity
 import com.dt.lebenindeutschland.utility.DataBaseHandler
 import com.dt.lebenindeutschland.utility.State
 import com.dt.lebenindeutschland.utility.userLanguage
+import hotchemi.android.rate.AppRate
 import java.util.*
 
 
@@ -35,6 +36,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
             )
         )
         setContentView(R.layout.activity_main)
+
+        AppRate.with(this)
+            .setInstallDays(1) // default 10, 0 means install day.
+            .setLaunchTimes(3) // default 10
+            .setRemindInterval(2) // default 1
+            .setShowLaterButton(true) // default true
+            .setDebug(false) // default false
+            .setOnClickButtonListener { }
+            .monitor()
+        // Show a dialog if meets conditions
+        AppRate.showRateDialogIfMeetsConditions(this)
         initialize()
     }
 
