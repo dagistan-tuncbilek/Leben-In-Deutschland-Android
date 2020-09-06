@@ -23,9 +23,18 @@ class LanguageActivity : AppCompatActivity(), View.OnClickListener  {
     private lateinit var languageCardViewTurkish: CardView
     private lateinit var languageCardViewArab: CardView
     private lateinit var languageCardViewPolish: CardView
+    private lateinit var languageCardViewIran: CardView
+    private lateinit var languageCardViewFrench: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setLanguage()
+        setContentView(R.layout.activity_language)
+        initialize()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
         setLanguage()
         setContentView(R.layout.activity_language)
         initialize()
@@ -40,6 +49,8 @@ class LanguageActivity : AppCompatActivity(), View.OnClickListener  {
             R.id.languageCardViewTurkish -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.TURKISH.ordinal)
             R.id.languageCardViewArab -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.ARABIC.ordinal)
             R.id.languageCardViewPolish -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.POLISH.ordinal)
+            R.id.languageCardViewIran -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.IRANIAN.ordinal)
+            R.id.languageCardViewFrench -> DataBaseHandler(this).updateUtilityData(LANGUAGE_ID, Language.FRENCH.ordinal)
         }
         startActivity(Intent(this, MainActivity::class.java))
     }
@@ -59,11 +70,10 @@ class LanguageActivity : AppCompatActivity(), View.OnClickListener  {
         languageCardViewArab.setOnClickListener(this)
         languageCardViewPolish = findViewById(R.id.languageCardViewPolish)
         languageCardViewPolish.setOnClickListener(this)
-    }
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        setLanguage()
+        languageCardViewIran = findViewById(R.id.languageCardViewIran)
+        languageCardViewIran.setOnClickListener(this)
+        languageCardViewFrench = findViewById(R.id.languageCardViewFrench)
+        languageCardViewFrench.setOnClickListener(this)
     }
 
     private fun setLanguage() {

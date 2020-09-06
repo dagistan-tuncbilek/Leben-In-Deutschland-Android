@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vivre en Allemagne</string>
+    <string name="bundeslander">États fédéraux</string>
+    <string name="title_lernen">Questions et Réponses</string>
+    <string name="explanation2">Le test comprend 33 questions. Vous disposez de 60 minutes pour répondre à ces questions.</string>
+    <string name="explanation3">Si vous répondez correctement à au moins 15 questions, vous réussissez l\'examen. Si vous répondez correctement à au moins 17 questions, vous n\'avez pas besoin de passer un autre test de citoyenneté plus tard.</string>
+    <string name="citizenship_exam">Examen de citoyenneté</string>
+    <string name="select_a_state">Choisissez un état</string>
+    <string name="next">Prochain</string>
+    <string name="previous">Précédent</string>
+    <string name="congratulations">Toutes nos félicitations</string>
+    <string name="show_result">Voir les résultats</string>
+    <string name="show_questions">Afficher les questions</string>
+    <string name="finish_exam">Terminez l\'examen</string>
+    <string name="explanation">Descriptions</string>
+    <string name="start">Début</string>
+    <string name="select_a_thema">Veuillez choisir un sujet</string>
+    <string name="state_questions">Question d\'État</string>
+    <string name="true_answer">Bonne réponse</string>
+    <string name="false_answer">Mauvaise réponse</string>
+    <string name="empty_answer">Réponse vide</string>
+    <string name="first_question">C\'est la première question</string>
+    <string name="last_question">C\'est la dernière question</string>
+    <string name="sackd">Réessayer!</string>
+    <string name="finish">Fini</string>
+    <string name="change_language">Changer la langue</string>
+    <string name="language_polish">Polonais</string>
+    <string name="language_german">Allemand</string>
+    <string name="language_english">Anglais</string>
+    <string name="language_russia">Russe</string>
+    <string name="language_turkish">Turc</string>
+    <string name="language_arabic">Arabe</string>
+    <string name="positive">Oui</string>
+    <string name="negative">Non</string>
+    <string name="explanation1" translatable="false">Nous avons rassemblé quelques informations et astuces pour vous faciliter ce test.</string>
+    <string name="test_yourself" translatable="false">Testez-vous</string>
+    <string name="trial_exam" translatable="false">Examen</string>
+    <string name="success_explanation" translatable="false">Le pourcentage de réussite à l\'examen réel est</string>
+    <string name="end_the_exam" translatable="false">Souhaitez-vous terminer l\'examen?</string>
+    <string name="results" translatable="false">Résultats</string>
+    <string name="general_questions" translatable="false">Question fédérale</string>
+    <string name="language_french">Français</string>
+    <string name="language_iran">Persan</string>
+</resources>

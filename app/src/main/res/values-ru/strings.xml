@@ -9,7 +9,7 @@
     <string name="select_a_thema">Выберите тему</string>
     <string name="citizenship_exam">Экзамен на гражданство</string>
     <string name="next">Cледующий</string>
-    <string name="last">Предыдущий</string>
+    <string name="previous">Предыдущий</string>
     <string name="finish">финиш</string>
     <string name="first_question">Это первый вопрос</string>
     <string name="last_question">Это последний вопрос</string>
@@ -40,4 +40,6 @@
     <string name="state_questions">Государственный вопрос</string>
     <string name="positive">Да</string>
     <string name="negative">Нет</string>
+    <string name="language_french">французский язык</string>
+    <string name="language_iran">Персидский</string>
 </resources>

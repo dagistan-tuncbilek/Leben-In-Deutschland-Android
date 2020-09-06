@@ -19,11 +19,15 @@ enum class Language {
     },
     ARABIC {
         override fun getLanguage(): String = "ar"
-
     },
     POLISH {
         override fun getLanguage(): String = "pl"
-
+    },
+    FRENCH{
+        override fun getLanguage(): String = "fr"
+    },
+    IRANIAN{
+        override fun getLanguage(): String = "ira"
     };
     abstract fun getLanguage(): String
 }

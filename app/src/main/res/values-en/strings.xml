@@ -9,7 +9,7 @@
     <string name="select_a_thema">Choose a topic</string>
     <string name="citizenship_exam">Citizenship Exam</string>
     <string name="next">Next</string>
-    <string name="last">Previous</string>
+    <string name="previous">Previous</string>
     <string name="finish">Finish</string>
     <string name="first_question">This is the first question</string>
     <string name="last_question">That is the last question</string>
@@ -40,4 +40,6 @@
     <string name="state_questions">State question</string>
     <string name="positive">Yes</string>
     <string name="negative">No</string>
+    <string name="language_french">French</string>
+    <string name="language_iran">Persian</string>
 </resources>

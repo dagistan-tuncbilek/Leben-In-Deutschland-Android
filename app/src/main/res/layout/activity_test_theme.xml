@@ -122,7 +122,7 @@
 
         <Button
             android:id="@+id/btnTestPrevious"
-            android:text="@string/last"
+            android:text="@string/previous"
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textColor="#ffffff"

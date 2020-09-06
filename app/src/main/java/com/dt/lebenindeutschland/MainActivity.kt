@@ -50,6 +50,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         initialize()
     }
 
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        setLanguage()
+        setContentView(R.layout.activity_main)
+        initialize()
+    }
+
     override fun onClick(v: View?) {
         Log.d(TAG, "Clicked")
         if (v != null) {
@@ -95,11 +102,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         mainCardViewSelectState.setOnClickListener(this)
         mainCardVievLanguage = findViewById(R.id.mainCardVievLanguage)
         mainCardVievLanguage.setOnClickListener(this)
-    }
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        setLanguage()
     }
 
     private fun setLanguage() {

@@ -146,7 +146,7 @@
                 android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/mybutton"
-                android:text="@string/last"
+                android:text="@string/previous"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"
                 tools:ignore="RelativeOverlap" />

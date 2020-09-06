@@ -9,7 +9,7 @@
     <string name="select_a_thema">اختر موضوعا</string>
     <string name="citizenship_exam">امتحان المواطنة</string>
     <string name="next">التالى</string>
-    <string name="last">السابق</string>
+    <string name="previous">السابق</string>
     <string name="finish">إنهاء</string>
     <string name="first_question">هذا هو السؤال الأول</string>
     <string name="last_question">هذا هو السؤال الأخير</string>
@@ -40,4 +40,6 @@
     <string name="state_questions">سؤال الدولة</string>
     <string name="positive">أجل</string>
     <string name="negative">لا</string>
+    <string name="language_french">فرنسي</string>
+    <string name="language_iran">اللغة الفارسية</string>
 </resources>

@@ -9,7 +9,7 @@
     <string name="select_a_thema">Bir konu seçin</string>
     <string name="citizenship_exam">Vatandaşlık sınavı</string>
     <string name="next">Sonraki</string>
-    <string name="last">Önceki</string>
+    <string name="previous">Önceki</string>
     <string name="finish">Bitir</string>
     <string name="first_question">İlk Soru</string>
     <string name="last_question">Son Soru</string>
@@ -40,4 +40,6 @@
     <string name="state_questions">Eyalet sorusu</string>
     <string name="positive">Evet</string>
     <string name="negative">Hayır</string>
+    <string name="language_french">Fransizca</string>
+    <string name="language_iran">Farsça</string>
 </resources>

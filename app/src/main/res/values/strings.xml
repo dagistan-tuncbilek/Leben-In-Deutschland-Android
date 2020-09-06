@@ -33,7 +33,7 @@
     <string name="select_state" translatable="false">Select State</string>
     <string name="select_a_state">Wählen Sie ein Bundesland</string>
     <string name="next">Nächster</string>
-    <string name="last">Bisherige</string>
+    <string name="previous">Bisherige</string>
     <string name="congratulations">Herzliche Glückwünsche</string>
     <string name="show_result">Ergebnisse Anzeigen</string>
     <string name="show_questions">Fragen Anzeigen</string>
@@ -42,7 +42,7 @@
     <string name="finish_exam">Beende die Prüfung</string>
     <string name="explanation">Beschreibungen</string>
     <string name="start">Starten</string>
-    <string name="select_a_thema">Wahlen Sie bitte ein Thema</string>
+    <string name="select_a_thema">Wählen Sie bitte ein Thema</string>
     <string name="results">Ergebnisse</string>
     <string name="general_questions">Bundeseinheitlichen Frage</string>
     <string name="state_questions">Bundesland Frage</string>
@@ -63,6 +63,8 @@
     <string name="language_russia">Russisch</string>
     <string name="language_turkish">Türkisch</string>
     <string name="language_arabic">Arabisch</string>
+    <string name="language_french">Französisch</string>
+    <string name="language_iran">Persisch</string>
     <string name="positive">Ja</string>
     <string name="negative">Nein</string>
 </resources>

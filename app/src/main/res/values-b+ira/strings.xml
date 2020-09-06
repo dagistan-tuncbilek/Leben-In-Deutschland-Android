@@ -1,2 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Leben In Deutschland</string>
+    <string name="bundeslander">ایالات فدرال</string>
+    <string name="title_lernen">پرسش و پاسخ</string>
+    <string name="explanation1">ما برای سهولت انجام این تست برخی از اطلاعات و نکات را گردآوری کرده ایم.</string>
+    <string name="explanation2">این آزمون شامل 33 سوال است. برای پاسخ به این سالات 60 دقیقه وقت دارید.</string>
+    <string name="explanation3">اگر حداقل به 15 سوال به درستی پاسخ دهید ، در امتحان قبول می شوید. اگر حداقل به 17 سوال به درستی پاسخ دهید ، بعداً لازم نیست در آزمون تابعیت دیگری شرکت کنید.</string>
+    <string name="citizenship_exam">آزمون تابعیت</string>
+    <string name="test_yourself">خودت را بیازمای</string>
+    <string name="trial_exam">امتحان</string>
+    <string name="select_a_state">یک ایالت را انتخاب کنید</string>
+    <string name="next">بعد</string>
+    <string name="previous">قبلی</string>
+    <string name="congratulations">تبریک می گویم</string>
+    <string name="show_result">مشاهده نتایج</string>
+    <string name="show_questions">س questionsالات را نشان دهید</string>
+    <string name="finish_exam">امتحان را تمام کنید</string>
+    <string name="explanation">توضیحات</string>
+    <string name="start">شروع کنید</string>
+    <string name="select_a_thema">موضوعی را انتخاب کنید</string>
+    <string name="results">نتایج</string>
+    <string name="general_questions">سوال فدرال</string>
+    <string name="state_questions">سوال دولتی</string>
+    <string name="true_answer">پاسخ صحیح</string>
+    <string name="false_answer">جواب اشتباه</string>
+    <string name="empty_answer">جواب خالی</string>
+    <string name="success_explanation">درصد موفقیت در آزمون واقعی است</string>
+    <string name="end_the_exam">آیا دوست دارید امتحان را تمام کنید؟</string>
+    <string name="first_question">این اولین سوال است</string>
+    <string name="last_question">این آخرین سال است</string>
+    <string name="sackd">دوباره امتحان کنید!</string>
+    <string name="finish">تمام کردن</string>
+    <string name="change_language">زبان را تغییر دهید</string>
+    <string name="language_polish">لهستانی</string>
+    <string name="language_german">آلمانی</string>
+    <string name="language_english">انگلیسی</string>
+    <string name="language_russia">روسی</string>
+    <string name="language_turkish">ترکی</string>
+    <string name="language_arabic">عربی</string>
+    <string name="language_french">فرانسوی</string>
+    <string name="positive">آره</string>
+    <string name="negative">نه</string>
+    <string name="language_iran">فارسی</string>
+</resources>

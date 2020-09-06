@@ -9,7 +9,7 @@
     <string name="select_a_thema">Wybierz temat</string>
     <string name="citizenship_exam">Egzamin na obywatelstwo</string>
     <string name="next">Kolejny</string>
-    <string name="last">Poprzedni</string>
+    <string name="previous">Poprzedni</string>
     <string name="finish">Koniec</string>
     <string name="first_question">To jest pierwsze pytanie</string>
     <string name="last_question">To jest ostatnie pytanie</string>
@@ -40,4 +40,6 @@
     <string name="state_questions">Pytanie o stan</string>
     <string name="positive">Tak</string>
     <string name="negative">Nie</string>
+    <string name="language_french">Francuski</string>
+    <string name="language_iran">Perski</string>
 </resources>
