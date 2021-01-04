@@ -2,4 +2,3 @@
 
 * Android Studio and JAVA
 
-## Under Construction
